@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/courses.css"/>
+    <title>Java Course - MacOStar</title>
+</head>
+<body>
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+<header>
+    <nav>
+        <a href="#" class="logo">MacOStar</a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="../course-list.html">Courses</a></li>
+            <li><a href="#">Pricing</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="course-detail">
+    <div class="breadcrumb">
+        <a href="../course-list.html">Courses</a> → Java Programming
+    </div>
+    
+    <h2>Java Programming Mastery</h2>
+    <p>Master Java programming from basics to advanced concepts with hands-on projects and real-world applications</p>
+    
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/l9AzO1FMgM8?si=3LRnjLwnFWm8931U" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="course-content">
+        <h3>What you will learn:</h3>
+        <ul class="course-topics">
+            <li>Java Fundamentals - Variables, Data Types, Control Structures</li>
+            <li>Object-Oriented Programming - Classes, Objects, Inheritance</li>
+            <li>Java Collections Framework - Lists, Sets, Maps</li>
+            <li>Exception Handling and Error Management</li>
+            <li>File I/O and Stream Processing</li>
+            <li>Java Swing GUI Development</li>
+            <li>Database Connectivity with JDBC</li>
+            <li>Multithreading and Concurrency</li>
+            <li>Java 8+ Features - Lambda Expressions, Streams</li>
+            <li>Building Real-World Applications</li>
+        </ul>
+    </div>
+
+    <div class="course-content">
+        <h3>Course Structure</h3>
+        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+            <h4 style="color: #1e40af; margin-bottom: 1rem;">Module 1: Java Basics (Week 1-2)</h4>
+            <p>Introduction to Java, setting up development environment, basic syntax, and data types.</p>
+        </div>
+        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+            <h4 style="color: #1e40af; margin-bottom: 1rem;">Module 2: OOP Concepts (Week 3-4)</h4>
+            <p>Classes, objects, inheritance, polymorphism, encapsulation, and abstraction.</p>
+        </div>
+        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+            <h4 style="color: #1e40af; margin-bottom: 1rem;">Module 3: Advanced Java (Week 5-6)</h4>
+            <p>Collections, generics, exception handling, and file I/O operations.</p>
+        </div>
+    </div>
+
+    <button class="enroll-btn">Enroll Now</button>
+    
+    <button class="floating-action" onclick="scrollToTop()" title="Back to Top">↑</button>
+</main>
+<footer>
+    <p>Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+        document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+    });
+    
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+</body>
+</html>
