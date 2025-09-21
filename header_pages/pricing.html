@@ -29,14 +29,6 @@
             🎉 Early bird discount: <strong>-30%</strong> until <strong>October 1</strong>!
         </div>
 
-        <div class="billing-toggle" aria-label="Billing period">
-            <span>Monthly</span>
-            <label class="switch">
-                <input id="billingSwitch" type="checkbox" />
-                <span class="slider"></span>
-            </label>
-            <span>Yearly <em>(-20%)</em></span>
-        </div>
     </section>
 
     <section class="plans">
@@ -147,17 +139,5 @@
     <p>Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
 </footer>
 
-<script>
-    const sw = document.getElementById('billingSwitch');
-    const spans = document.querySelectorAll('.price span');
-    const per = document.querySelectorAll('.price small');
-    function setYearly(on){
-        spans.forEach(s=>{
-            s.textContent = on ? s.dataset.year : s.dataset.month;
-        });
-        per.forEach(el=> el.textContent = on ? '/mo (billed yearly)' : '/mo');
-    }
-    sw.addEventListener('change', e => setYearly(e.target.checked));
-</script>
 </body>
 </html>

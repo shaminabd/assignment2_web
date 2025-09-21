@@ -7,9 +7,6 @@
     <title>Java Course - MacOStar</title>
 </head>
 <body>
-    <div class="scroll-indicator">
-        <div class="scroll-progress" id="scrollProgress"></div>
-    </div>
 <header>
     <nav>
         <a href="../index.html" class="logo">
@@ -68,28 +65,11 @@
         </div>
     </div>
 
-    <button class="enroll-btn" onclick="location.href='../header_pages/pricing.html'">Enroll Now</button>
-    
-    <button class="floating-action" onclick="scrollToTop()" title="Back to Top">↑</button>
+    <a href="../header_pages/pricing.html" class="enroll-btn">Enroll Now</a>
 </main>
 <footer>
     <p>Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
 </footer>
 
-<script>
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercent = (scrollTop / scrollHeight) * 100;
-        document.getElementById('scrollProgress').style.width = scrollPercent + '%';
-    });
-    
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-</script>
 </body>
 </html>
