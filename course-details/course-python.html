@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/courses.css"/>
     <title>Python Course - MacOStar</title>
 </head>
 <body>
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
 <header>
     <nav>
-        <a href="#" class="logo">MacOStar</a>
+        <a href="../index.html" class="logo">
+            <span class="apple-logo">🍎</span> MacOStar
+        </a>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="../course-list.html">Courses</a></li>
-            <li><a href="#">Pricing</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../header_pages/course-list.html">Courses</a></li>
+            <li><a href="../header_pages/pricing.html">Pricing</a></li>
         </ul>
     </nav>
 </header>
 <main class="course-detail">
     <div class="breadcrumb">
-        <a href="../course-list.html">Courses</a> → Python Programming
+        <a href="../header_pages/course-list.html">Courses</a> → Python Programming
     </div>
     
     <h2>Python Programming Excellence</h2>
@@ -62,10 +68,28 @@
         </div>
     </div>
 
-    <button class="enroll-btn">Enroll Now</button>
+    <button class="enroll-btn" onclick="location.href='../header_pages/pricing.html'">Enroll Now</button>
+    
+    <button class="floating-action" onclick="scrollToTop()" title="Back to Top">↑</button>
 </main>
 <footer>
     <p>Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
 </footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+        document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+    });
+    
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
 </body>
 </html>

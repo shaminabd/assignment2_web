@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/courses.css"/>
     <title>Java Course - MacOStar</title>
 </head>
@@ -11,17 +12,19 @@
     </div>
 <header>
     <nav>
-        <a href="#" class="logo">MacOStar</a>
+        <a href="../index.html" class="logo">
+            <span class="apple-logo">🍎</span> MacOStar
+        </a>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="../course-list.html">Courses</a></li>
-            <li><a href="#">Pricing</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../header_pages/course-list.html">Courses</a></li>
+            <li><a href="../header_pages/pricing.html">Pricing</a></li>
         </ul>
     </nav>
 </header>
 <main class="course-detail">
     <div class="breadcrumb">
-        <a href="../course-list.html">Courses</a> → Java Programming
+        <a href="../header_pages/course-list.html">Courses</a> → Java Programming
     </div>
     
     <h2>Java Programming Mastery</h2>
@@ -65,7 +68,7 @@
         </div>
     </div>
 
-    <button class="enroll-btn">Enroll Now</button>
+    <button class="enroll-btn" onclick="location.href='../header_pages/pricing.html'">Enroll Now</button>
     
     <button class="floating-action" onclick="scrollToTop()" title="Back to Top">↑</button>
 </main>

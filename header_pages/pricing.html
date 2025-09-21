@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MacOStar — Pricing</title>
+    <link rel="stylesheet" href="../css/pricing.css?v=4"/>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="../index.html" class="logo">
+            <span class="apple-logo">🍎</span> MacOStar
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="course-list.html">Courses</a></li>
+            <li><a href="pricing.html" class="active">Pricing</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero-section">
+        <h1>Simple, Student-Friendly Pricing</h1>
+        <p>Start for free. Go Pro for certificates & mentorship. Team plan for groups.</p>
+
+        <div class="promo-banner">
+            🎉 Early bird discount: <strong>-30%</strong> until <strong>October 1</strong>!
+        </div>
+
+        <div class="billing-toggle" aria-label="Billing period">
+            <span>Monthly</span>
+            <label class="switch">
+                <input id="billingSwitch" type="checkbox" />
+                <span class="slider"></span>
+            </label>
+            <span>Yearly <em>(-20%)</em></span>
+        </div>
+    </section>
+
+    <section class="plans">
+        <div class="plan">
+            <div class="plan-head">
+                <h3>Free</h3>
+                <p class="price"><span data-month="₸0" data-year="₸0">₸0</span> <small>/mo</small></p>
+            </div>
+            <ul class="features">
+                <li>Access to selected lessons</li>
+                <li>Community chat</li>
+                <li>No certificate</li>
+            </ul>
+            <button class="btn">Get Started</button>
+            <p class="plan-testimonial">"Great to try out before going Pro."</p>
+        </div>
+
+        <div class="plan popular">
+            <div class="badge">Most popular</div>
+            <div class="plan-head">
+                <h3>Pro</h3>
+                <p class="price"><span data-month="₸4,900" data-year="₸3,920">₸4,900</span> <small>/mo</small></p>
+            </div>
+            <ul class="features">
+                <li>All courses & projects</li>
+                <li>Certificates included</li>
+                <li>Mentor Q&A (weekly)</li>
+                <li>Downloadable resources</li>
+            </ul>
+            <button class="btn primary">Go Pro</button>
+            <p class="plan-testimonial">"Pro helped me get my certificate in 2 months!"</p>
+        </div>
+
+        <div class="plan">
+            <div class="plan-head">
+                <h3>Team</h3>
+                <p class="price"><span data-month="₸12,900" data-year="₸10,320">₸12,900</span> <small>/mo</small></p>
+            </div>
+            <ul class="features">
+                <li>3–10 students</li>
+                <li>Private mentor sessions</li>
+                <li>Custom deadlines & reports</li>
+                <li>Team progress dashboard</li>
+            </ul>
+            <button class="btn">Contact Us</button>
+            <p class="plan-testimonial">"Perfect for study groups at AITU."</p>
+        </div>
+    </section>
+
+    <section class="comparison">
+        <h2>Compare Plans</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Features</th>
+                <th>Free</th>
+                <th>Pro</th>
+                <th>Team</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Access to all courses</td>
+                <td>—</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Certificates</td>
+                <td>—</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Mentor support</td>
+                <td>—</td>
+                <td>Weekly Q&A</td>
+                <td>Private sessions</td>
+            </tr>
+            <tr>
+                <td>Team dashboard</td>
+                <td>—</td>
+                <td>—</td>
+                <td>✓</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="faq">
+        <h2>FAQ</h2>
+        <details>
+            <summary>Which plan includes certificates?</summary>
+            <p>Certificates are only available in Pro and Team plans.</p>
+        </details>
+        <details>
+            <summary>What languages do you support?</summary>
+            <p>Courses are available in English, Russian, and Kazakh languages.</p>
+        </details>
+        <details>
+            <summary>How do I join the Team plan?</summary>
+            <p>Click the "Contact Us" button and send us your team details and requirements.</p>
+        </details>
+    </section>
+</main>
+
+<footer>
+    <p>Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
+</footer>
+
+<script>
+    const sw = document.getElementById('billingSwitch');
+    const spans = document.querySelectorAll('.price span');
+    const per = document.querySelectorAll('.price small');
+    function setYearly(on){
+        spans.forEach(s=>{
+            s.textContent = on ? s.dataset.year : s.dataset.month;
+        });
+        per.forEach(el=> el.textContent = on ? '/mo (billed yearly)' : '/mo');
+    }
+    sw.addEventListener('change', e => setYearly(e.target.checked));
+</script>
+</body>
+</html>
