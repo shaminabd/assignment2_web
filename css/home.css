@@ -107,6 +107,7 @@ header nav {
     font-weight: 600;
     transition: all 0.3s;
     box-shadow: 0 6px 18px rgba(251, 191, 36, 0.28);
+    text-decoration: none;
 }
 
 .enroll-btn:hover {
@@ -126,12 +127,13 @@ header nav {
 }
 
 .feature-grid {
-    display: grid;
+    display: flex;
     gap: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
     max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .feature-card {
@@ -144,11 +146,15 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 64px;
+    min-height: 80px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .about {
@@ -176,16 +182,21 @@ header nav {
     display: flex;
     justify-content: center;
     gap: 3rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .member {
     text-align: center;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
 }
 
 .member img {
     width: 140px;
     height: 140px;
-    border-radius: 50%;
+    border-radius: 5%;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin-bottom: 1rem;
@@ -217,12 +228,13 @@ header nav {
 }
 
 .testimonial-grid {
-    display: grid;
+    display: flex;
     gap: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .testimonial {
@@ -231,6 +243,13 @@ header nav {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     font-style: italic;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
 }
 
 .testimonial span {
@@ -246,6 +265,8 @@ header nav {
     gap: 2rem;
     margin: 3rem 0;
     padding: 0 2rem;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .stat {
@@ -256,6 +277,91 @@ header nav {
     font-weight: 600;
     font-size: 1.2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.stat:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.companies {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.companies h2 {
+    color: #1e40af;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.companies-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.company-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    background: white;
+}
+
+.company-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.company-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.company-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.9), rgba(59, 130, 246, 0.8));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s;
+    text-align: center;
+    padding: 1rem;
+}
+
+.company-item:hover .company-overlay {
+    opacity: 1;
+}
+
+.company-overlay h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.company-overlay p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
 
 .contact-form {
@@ -314,6 +420,59 @@ header nav {
 .contact-form button:hover {
     background: #3b82f6;
     transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .feature-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-card {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .member {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .testimonial-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonial {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .stat {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .companies-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .companies-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 footer {

@@ -20,21 +20,33 @@
     </nav>
 </header>
 <main class="course-detail">
-    <div class="breadcrumb">
-        <a href="../header_pages/course-list.html">Courses</a> → Java Programming
+    <div class="course-sidebar">
+        <h3>Course Navigation</h3>
+        <ul>
+            <li><a href="#video">Video Introduction</a></li>
+            <li><a href="#topics">What You'll Learn</a></li>
+            <li><a href="#projects">Hands-On Projects</a></li>
+            <li><a href="#timeline">Course Timeline</a></li>
+            <li><a href="#gallery">Student Gallery</a></li>
+        </ul>
     </div>
     
-    <h2>Java Programming Mastery</h2>
-    <p>Master Java programming from basics to advanced concepts with hands-on projects and real-world applications</p>
+    <div class="course-main">
+        <div class="breadcrumb">
+            <a href="../header_pages/course-list.html">Courses</a> → Java Programming
+        </div>
+        
+        <h2>Java Programming Mastery</h2>
+        <p>Master Java programming from basics to advanced concepts with hands-on projects and real-world applications</p>
     
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/l9AzO1FMgM8?si=3LRnjLwnFWm8931U" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+        <div class="video-container" id="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l9AzO1FMgM8?si=3LRnjLwnFWm8931U" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+            gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 
-    <div class="course-content">
-        <h3>What you will learn:</h3>
+        <div class="course-content" id="topics">
+            <h3>What you will learn:</h3>
         <ul class="course-topics">
             <li>Java Fundamentals - Variables, Data Types, Control Structures</li>
             <li>Object-Oriented Programming - Classes, Objects, Inheritance</li>
@@ -49,8 +61,8 @@
         </ul>
     </div>
 
-    <div class="course-content">
-        <h3>Course Structure</h3>
+        <div class="course-content" id="projects">
+            <h3>Course Structure</h3>
         <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
             <h4 style="color: #1e40af; margin-bottom: 1rem;">Module 1: Java Basics (Week 1-2)</h4>
             <p>Introduction to Java, setting up development environment, basic syntax, and data types.</p>
@@ -62,10 +74,95 @@
         <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
             <h4 style="color: #1e40af; margin-bottom: 1rem;">Module 3: Advanced Java (Week 5-6)</h4>
             <p>Collections, generics, exception handling, and file I/O operations.</p>
+            </div>
+        </div>
+
+        <div class="course-content" id="timeline">
+            <h3>Course Timeline</h3>
+            <div style="display: grid; gap: 1rem; margin: 1rem 0;">
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #1e40af;">
+                    <strong>Week 1-2:</strong> Java Basics and Development Environment
+                </div>
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                    <strong>Week 3-4:</strong> Object-Oriented Programming Concepts
+                </div>
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #fbbf24;">
+                    <strong>Week 5-6:</strong> Advanced Java and Real-World Applications
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="gallery">
+        <h3>Student Projects Gallery</h3>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300&h=200&fit=crop" alt="Banking System">
+                <div class="gallery-overlay">
+                    <h4>Banking Management System</h4>
+                    <p>Student: Aida K.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" alt="E-commerce App">
+                <div class="gallery-overlay">
+                    <h4>E-commerce Application</h4>
+                    <p>Student: Bekarys M.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Library System">
+                <div class="gallery-overlay">
+                    <h4>Library Management System</h4>
+                    <p>Student: Damir S.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=300&h=200&fit=crop" alt="Student Portal">
+                <div class="gallery-overlay">
+                    <h4>Student Portal</h4>
+                    <p>Student: Medina A.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" alt="Hospital System">
+                <div class="gallery-overlay">
+                    <h4>Hospital Management</h4>
+                    <p>Student: Sanat B.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300&h=200&fit=crop" alt="Inventory System">
+                <div class="gallery-overlay">
+                    <h4>Inventory System</h4>
+                    <p>Student: Shyngys A.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Restaurant POS">
+                <div class="gallery-overlay">
+                    <h4>Restaurant POS System</h4>
+                    <p>Student: Aida K.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=300&h=200&fit=crop" alt="School Management">
+                <div class="gallery-overlay">
+                    <h4>School Management</h4>
+                    <p>Student: Bekarys M.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" alt="Car Rental">
+                <div class="gallery-overlay">
+                    <h4>Car Rental System</h4>
+                    <p>Student: Damir S.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <a href="../header_pages/pricing.html" class="enroll-btn">Enroll Now</a>
+        <a href="../header_pages/pricing.html" class="enroll-btn">Enroll Now</a>
+    </div>
 </main>
 <footer>
     <p>Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
