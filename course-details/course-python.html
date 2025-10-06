@@ -3,170 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/courses.css"/>
     <title>Python Course - MacOStar</title>
 </head>
 <body>
-<header>
-    <nav>
-        <a href="../index.html" class="logo">
-            <span class="apple-logo">🍎</span> MacOStar
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+    <div class="container-fluid px-lg-5">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+            <span class="apple-logo me-2">🍎</span> MacOStar
         </a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../header_pages/course-list.html">Courses</a></li>
-            <li><a href="../header_pages/pricing.html">Pricing</a></li>
-        </ul>
-    </nav>
-</header>
-<main class="course-detail">
-    <div class="course-sidebar">
-        <h3>Course Navigation</h3>
-        <ul>
-            <li><a href="#video">Video Introduction</a></li>
-            <li><a href="#topics">What You'll Learn</a></li>
-            <li><a href="#projects">Hands-On Projects</a></li>
-            <li><a href="#timeline">Course Timeline</a></li>
-            <li><a href="#gallery">Student Gallery</a></li>
-        </ul>
-    </div>
-    
-    <div class="course-main">
-        <div class="breadcrumb">
-            <a href="../header_pages/course-list.html">Courses</a> → Python Programming
-        </div>
-        
-        <h2>Python Programming Excellence</h2>
-        <p>Learn Python from scratch to advanced level with practical projects and industry best practices</p>
-    
-        <div class="video-container" id="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/x7X9w_GIm1s?si=qUrDMxM7UoBB7Vzq" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-            gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-        <div class="course-content" id="topics">
-            <h3>What you will learn:</h3>
-        <ul class="course-topics">
-            <li>Python Fundamentals - Syntax, Variables, Data Types</li>
-            <li>Control Flow - Loops, Conditionals, Functions</li>
-            <li>Data Structures - Lists, Tuples, Dictionaries, Sets</li>
-            <li>Object-Oriented Programming in Python</li>
-            <li>File Handling and Exception Management</li>
-            <li>Python Libraries - NumPy, Pandas, Matplotlib</li>
-            <li>Web Development with Flask/Django</li>
-            <li>Data Science and Machine Learning Basics</li>
-            <li>API Development and Testing</li>
-            <li>Deployment and Production Ready Code</li>
-        </ul>
-    </div>
-
-        <div class="course-content" id="projects">
-            <h3>Course Projects</h3>
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-            <h4 style="color: #1e40af; margin-bottom: 1rem;">Project 1: Calculator App</h4>
-            <p>Build a command-line calculator with advanced mathematical operations.</p>
-        </div>
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-            <h4 style="color: #1e40af; margin-bottom: 1rem;">Project 2: Web Scraper</h4>
-            <p>Create a web scraper to extract data from websites using BeautifulSoup.</p>
-        </div>
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-            <h4 style="color: #1e40af; margin-bottom: 1rem;">Project 3: Data Analysis Dashboard</h4>
-            <p>Build a data analysis dashboard using Pandas and Matplotlib.</p>
-            </div>
-        </div>
-
-        <div class="course-content" id="timeline">
-            <h3>Course Timeline</h3>
-            <div style="display: grid; gap: 1rem; margin: 1rem 0;">
-                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #1e40af;">
-                    <strong>Week 1-2:</strong> Python Fundamentals and Data Types
-                </div>
-                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #3b82f6;">
-                    <strong>Week 3-4:</strong> Object-Oriented Programming and Libraries
-                </div>
-                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #fbbf24;">
-                    <strong>Week 5-6:</strong> Web Development and Data Science
-                </div>
-            </div>
-        </div>
-
-        <div class="course-content" id="gallery">
-        <h3>Student Projects Gallery</h3>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Data Analysis">
-                <div class="gallery-overlay">
-                    <h4>Data Analysis Dashboard</h4>
-                    <p>Student: Aida K.</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&h=200&fit=crop" alt="Machine Learning">
-                <div class="gallery-overlay">
-                    <h4>ML Prediction Model</h4>
-                    <p>Student: Bekarys M.</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" alt="Web Scraper">
-                <div class="gallery-overlay">
-                    <h4>Web Scraping Tool</h4>
-                    <p>Student: Damir S.</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=300&h=200&fit=crop" alt="Flask App">
-                <div class="gallery-overlay">
-                    <h4>Flask Web Application</h4>
-                    <p>Student: Medina A.</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=200&fit=crop" alt="API Development">
-                <div class="gallery-overlay">
-                    <h4>REST API Service</h4>
-                    <p>Student: Sanat B.</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Automation Script">
-                <div class="gallery-overlay">
-                    <h4>Task Automation Script</h4>
-                    <p>Student: Shyngys A.</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=300&h=200&fit=crop" alt="Game Development">
-                <div class="gallery-overlay">
-                    <h4>Python Game</h4>
-                    <p>Student: Aida K.</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&h=200&fit=crop" alt="Chat Bot">
-                <div class="gallery-overlay">
-                    <h4>AI Chat Bot</h4>
-                    <p>Student: Bekarys M.</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Data Visualization">
-                <div class="gallery-overlay">
-                    <h4>Data Visualization Tool</h4>
-                    <p>Student: Damir S.</p>
-                </div>
-            </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav gap-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../header_pages/course-list.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../header_pages/pricing.html">Pricing</a>
+                </li>
+            </ul>
         </div>
     </div>
+</nav>
 
-        <a href="../header_pages/pricing.html" class="enroll-btn">Enroll Now</a>
+<main class="container-fluid my-4">
+    <div class="row g-4">
+        <aside class="col-lg-3 col-md-12">
+            <div class="card shadow-sm sticky-lg-top" style="top: 80px;">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="h5 mb-0">Course Navigation</h3>
+                </div>
+                <div class="card-body">
+                    <nav class="nav flex-column gap-2">
+                        <a class="nav-link text-primary" href="#video">📹 Video Introduction</a>
+                        <a class="nav-link text-primary" href="#topics">📚 What You'll Learn</a>
+                        <a class="nav-link text-primary" href="#projects">💻 Hands-On Projects</a>
+                        <a class="nav-link text-primary" href="#timeline">📅 Course Timeline</a>
+                        <a class="nav-link text-primary" href="#gallery">🎨 Student Gallery</a>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+
+        <div class="col-lg-9 col-md-12">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb bg-light p-3 rounded">
+                    <li class="breadcrumb-item"><a href="../header_pages/course-list.html" class="text-decoration-none">Courses</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Python Programming</li>
+                </ol>
+            </nav>
+
+            <h1 class="display-4 text-primary text-center mb-3">Python Programming Excellence</h1>
+            <p class="lead text-center text-muted mb-5">Learn Python from scratch to advanced level with practical projects and industry best practices</p>
+
+            <div class="card shadow-sm mb-4" id="video">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="h5 mb-0">📹 Video Introduction</h3>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ratio ratio-16x9" style="max-width: 800px; margin: 0 auto;">
+                        <iframe src="https://www.youtube.com/embed/x7X9w_GIm1s?si=qUrDMxM7UoBB7Vzq"
+                        title="Python Course Introduction" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4" id="topics">
+                <div class="card-header bg-success text-white">
+                    <h3 class="h5 mb-0">📚 What You'll Learn</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">1</span>
+                            Python Fundamentals - Syntax, Variables, Data Types
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">2</span>
+                            Control Flow - Loops, Conditionals, Functions
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">3</span>
+                            Data Structures - Lists, Tuples, Dictionaries, Sets
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">4</span>
+                            Object-Oriented Programming in Python
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">5</span>
+                            File Handling and Exception Management
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">6</span>
+                            Python Libraries - NumPy, Pandas, Matplotlib
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">7</span>
+                            Web Development with Flask/Django
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">8</span>
+                            Data Science and Machine Learning Basics
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">9</span>
+                            API Development and Testing
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">10</span>
+                            Deployment and Production Ready Code
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4" id="projects">
+                <div class="card-header bg-info text-white">
+                    <h3 class="h5 mb-0">💻 Course Projects</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="card border-primary">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">Project 1: Calculator App</h5>
+                                    <p class="card-text">Build a command-line calculator with advanced mathematical operations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card border-success">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success">Project 2: Web Scraper</h5>
+                                    <p class="card-text">Create a web scraper to extract data from websites using BeautifulSoup.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card border-warning">
+                                <div class="card-body">
+                                    <h5 class="card-title text-warning">Project 3: Data Analysis Dashboard</h5>
+                                    <p class="card-text">Build a data analysis dashboard using Pandas and Matplotlib.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4" id="timeline">
+                <div class="card-header bg-warning text-dark">
+                    <h3 class="h5 mb-0">📅 Course Timeline</h3>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column gap-3">
+                        <div class="alert alert-primary border-start border-4 border-primary mb-0" role="alert">
+                            <strong>Week 1-2:</strong> Python Fundamentals and Data Types
+                        </div>
+                        <div class="alert alert-info border-start border-4 border-info mb-0" role="alert">
+                            <strong>Week 3-4:</strong> Object-Oriented Programming and Libraries
+                        </div>
+                        <div class="alert alert-warning border-start border-4 border-warning mb-0" role="alert">
+                            <strong>Week 5-6:</strong> Web Development and Data Science
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4" id="gallery">
+                <div class="card-header bg-secondary text-white">
+                    <h3 class="h5 mb-0">🎨 Student Projects Gallery</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Data Analysis" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Data Analysis Dashboard</h5>
+                                    <p class="card-text text-muted">Student: Aida K.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&h=200&fit=crop" class="card-img-top" alt="Machine Learning" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">ML Prediction Model</h5>
+                                    <p class="card-text text-muted">Student: Bekarys M.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" class="card-img-top" alt="Web Scraper" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Web Scraping Tool</h5>
+                                    <p class="card-text text-muted">Student: Damir S.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=300&h=200&fit=crop" class="card-img-top" alt="Flask App" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Flask Web Application</h5>
+                                    <p class="card-text text-muted">Student: Medina A.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=200&fit=crop" class="card-img-top" alt="API Development" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">REST API Service</h5>
+                                    <p class="card-text text-muted">Student: Sanat B.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Automation Script" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Task Automation Script</h5>
+                                    <p class="card-text text-muted">Student: Shyngys A.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=300&h=200&fit=crop" class="card-img-top" alt="Game Development" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Python Game</h5>
+                                    <p class="card-text text-muted">Student: Aida K.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&h=200&fit=crop" class="card-img-top" alt="Chat Bot" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">AI Chat Bot</h5>
+                                    <p class="card-text text-muted">Student: Bekarys M.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Data Visualization" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Data Visualization Tool</h5>
+                                    <p class="card-text text-muted">Student: Damir S.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center my-5">
+                <a href="../header_pages/pricing.html" class="btn btn-primary btn-lg px-5 py-3 shadow">Enroll Now</a>
+            </div>
+        </div>
     </div>
 </main>
-<footer>
-    <p>Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
+
+<footer class="text-center text-white py-4 mt-5" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+    <div class="container">
+        <p class="mb-0">Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
+    </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

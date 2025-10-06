@@ -3,170 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/courses.css"/>
     <title>HTML & CSS Course - MacOStar</title>
 </head>
 <body>
-<header>
-    <nav>
-        <a href="../index.html" class="logo">
-            <span class="apple-logo">🍎</span> MacOStar
-        </a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../header_pages/course-list.html">Courses</a></li>
-            <li><a href="../header_pages/pricing.html">Pricing</a></li>
-        </ul>
-    </nav>
-</header>
-<main class="course-detail">
-    <div class="course-sidebar">
-        <h3>Course Navigation</h3>
-        <ul>
-            <li><a href="#video">Video Introduction</a></li>
-            <li><a href="#topics">What You'll Learn</a></li>
-            <li><a href="#projects">Hands-On Projects</a></li>
-            <li><a href="#timeline">Course Timeline</a></li>
-            <li><a href="#gallery">Student Gallery</a></li>
-        </ul>
-    </div>
-    
-    <div class="course-main">
-        <div class="breadcrumb">
-            <a href="../header_pages/course-list.html">Courses</a> → HTML & CSS Programming
-        </div>
-        
-        <h2>HTML & CSS Web Development</h2>
-        <p>Master the fundamentals of web development with HTML5 and CSS3, creating beautiful and responsive websites</p>
-        
-        <div class="video-container" id="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ok-plXXHlWw?si=avowepgwwWzI6R7F" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-            gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
 
-        <div class="course-content" id="topics">
-            <h3>What you will learn:</h3>
-            <ul class="course-topics">
-                <li>HTML5 Fundamentals - Semantic Elements, Forms, Media</li>
-                <li>CSS3 Styling - Selectors, Properties, Layouts</li>
-                <li>Flexbox and Grid Layout Systems</li>
-                <li>Responsive Web Design Principles</li>
-                <li>CSS Animations and Transitions</li>
-                <li>CSS Preprocessors - SASS/SCSS</li>
-                <li>Cross-Browser Compatibility</li>
-                <li>Web Accessibility (WCAG Guidelines)</li>
-                <li>Performance Optimization Techniques</li>
-                <li>Modern CSS Frameworks and Tools</li>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+    <div class="container-fluid px-lg-5">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+            <span class="apple-logo me-2">🍎</span> MacOStar
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav gap-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../header_pages/course-list.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../header_pages/pricing.html">Pricing</a>
+                </li>
             </ul>
         </div>
+    </div>
+</nav>
 
-        <div class="course-content" id="projects">
-            <h3>Hands-On Projects</h3>
-            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-                <h4 style="color: #1e40af; margin-bottom: 1rem;">Project 1: Personal Portfolio</h4>
-                <p>Create a responsive personal portfolio website showcasing your skills and projects.</p>
+<main class="container-fluid my-4">
+    <div class="row g-4">
+        <aside class="col-lg-3 col-md-12">
+            <div class="card shadow-sm sticky-lg-top" style="top: 80px;">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="h5 mb-0">Course Navigation</h3>
+                </div>
+                <div class="card-body">
+                    <nav class="nav flex-column gap-2">
+                        <a class="nav-link text-primary" href="#video">📹 Video Introduction</a>
+                        <a class="nav-link text-primary" href="#topics">📚 What You'll Learn</a>
+                        <a class="nav-link text-primary" href="#projects">💻 Hands-On Projects</a>
+                        <a class="nav-link text-primary" href="#timeline">📅 Course Timeline</a>
+                        <a class="nav-link text-primary" href="#gallery">🎨 Student Gallery</a>
+                    </nav>
+                </div>
             </div>
-            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-                <h4 style="color: #1e40af; margin-bottom: 1rem;">Project 2: E-commerce Landing Page</h4>
-                <p>Design and develop a modern e-commerce landing page with animations and responsive design.</p>
+        </aside>
+
+        <div class="col-lg-9 col-md-12">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb bg-light p-3 rounded">
+                    <li class="breadcrumb-item"><a href="../header_pages/course-list.html" class="text-decoration-none">Courses</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">HTML & CSS Programming</li>
+                </ol>
+            </nav>
+
+            <h1 class="display-4 text-primary text-center mb-3">HTML & CSS Web Development</h1>
+            <p class="lead text-center text-muted mb-5">Master the fundamentals of web development with HTML5 and CSS3, creating beautiful and responsive websites</p>
+
+            <div class="card shadow-sm mb-4" id="video">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="h5 mb-0">📹 Video Introduction</h3>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ratio ratio-16x9" style="max-width: 800px; margin: 0 auto;">
+                        <iframe src="https://www.youtube.com/embed/ok-plXXHlWw?si=avowepgwwWzI6R7F"
+                        title="HTML & CSS Course Introduction" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
-            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-                <h4 style="color: #1e40af; margin-bottom: 1rem;">Project 3: Interactive Dashboard</h4>
-                <p>Build an interactive dashboard with CSS Grid, animations, and modern UI components.</p>
+
+            <div class="card shadow-sm mb-4" id="topics">
+                <div class="card-header bg-success text-white">
+                    <h3 class="h5 mb-0">📚 What You'll Learn</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">1</span>
+                            HTML5 Fundamentals - Semantic Elements, Forms, Media
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">2</span>
+                            CSS3 Styling - Selectors, Properties, Layouts
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">3</span>
+                            Flexbox and Grid Layout Systems
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">4</span>
+                            Responsive Web Design Principles
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">5</span>
+                            CSS Animations and Transitions
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">6</span>
+                            CSS Preprocessors - SASS/SCSS
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">7</span>
+                            Cross-Browser Compatibility
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">8</span>
+                            Web Accessibility (WCAG Guidelines)
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">9</span>
+                            Performance Optimization Techniques
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <span class="badge bg-primary me-2">10</span>
+                            Modern CSS Frameworks and Tools
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4" id="projects">
+                <div class="card-header bg-info text-white">
+                    <h3 class="h5 mb-0">💻 Hands-On Projects</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="card border-primary">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">Project 1: Personal Portfolio</h5>
+                                    <p class="card-text">Create a responsive personal portfolio website showcasing your skills and projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card border-success">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success">Project 2: E-commerce Landing Page</h5>
+                                    <p class="card-text">Design and develop a modern e-commerce landing page with animations and responsive design.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card border-warning">
+                                <div class="card-body">
+                                    <h5 class="card-title text-warning">Project 3: Interactive Dashboard</h5>
+                                    <p class="card-text">Build an interactive dashboard with CSS Grid, animations, and modern UI components.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4" id="timeline">
+                <div class="card-header bg-warning text-dark">
+                    <h3 class="h5 mb-0">📅 Course Timeline</h3>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column gap-3">
+                        <div class="alert alert-primary border-start border-4 border-primary mb-0" role="alert">
+                            <strong>Week 1-2:</strong> HTML5 Basics and Semantic Structure
+                        </div>
+                        <div class="alert alert-info border-start border-4 border-info mb-0" role="alert">
+                            <strong>Week 3-4:</strong> CSS3 Fundamentals and Layout Systems
+                        </div>
+                        <div class="alert alert-warning border-start border-4 border-warning mb-0" role="alert">
+                            <strong>Week 5-6:</strong> Responsive Design and Advanced CSS
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4" id="gallery">
+                <div class="card-header bg-secondary text-white">
+                    <h3 class="h5 mb-0">🎨 Student Projects Gallery</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Portfolio Project" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Portfolio Website</h5>
+                                    <p class="card-text text-muted">Student: Aida K.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop" class="card-img-top" alt="E-commerce Project" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">E-commerce Landing</h5>
+                                    <p class="card-text text-muted">Student: Bekarys M.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Dashboard Project" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Analytics Dashboard</h5>
+                                    <p class="card-text text-muted">Student: Damir S.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=200&fit=crop" class="card-img-top" alt="Blog Project" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Personal Blog</h5>
+                                    <p class="card-text text-muted">Student: Medina A.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300&h=200&fit=crop" class="card-img-top" alt="Restaurant Project" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Restaurant Website</h5>
+                                    <p class="card-text text-muted">Student: Sanat B.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop" class="card-img-top" alt="Fitness App" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fitness Tracker</h5>
+                                    <p class="card-text text-muted">Student: Shyngys A.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=300&h=200&fit=crop" class="card-img-top" alt="News Portal" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">News Portal</h5>
+                                    <p class="card-text text-muted">Student: Aida K.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=200&fit=crop" class="card-img-top" alt="Travel Agency" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Travel Agency</h5>
+                                    <p class="card-text text-muted">Student: Bekarys M.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop" class="card-img-top" alt="Online Store" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Online Store</h5>
+                                    <p class="card-text text-muted">Student: Damir S.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center my-5">
+                <a href="../header_pages/pricing.html" class="btn btn-primary btn-lg px-5 py-3 shadow">Enroll Now</a>
             </div>
         </div>
-
-        <div class="course-content" id="timeline">
-            <h3>Course Timeline</h3>
-            <div style="display: grid; gap: 1rem; margin: 1rem 0;">
-                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #1e40af;">
-                    <strong>Week 1-2:</strong> HTML5 Basics and Semantic Structure
-                </div>
-                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #3b82f6;">
-                    <strong>Week 3-4:</strong> CSS3 Fundamentals and Layout Systems
-                </div>
-                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #fbbf24;">
-                    <strong>Week 5-6:</strong> Responsive Design and Advanced CSS
-                </div>
-            </div>
-        </div>
-
-        <div class="course-content" id="gallery">
-            <h3>Student Projects Gallery</h3>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Portfolio Project">
-                    <div class="gallery-overlay">
-                        <h4>Portfolio Website</h4>
-                        <p>Student: Aida K.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop" alt="E-commerce Project">
-                    <div class="gallery-overlay">
-                        <h4>E-commerce Landing</h4>
-                        <p>Student: Bekarys M.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Dashboard Project">
-                    <div class="gallery-overlay">
-                        <h4>Analytics Dashboard</h4>
-                        <p>Student: Damir S.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=200&fit=crop" alt="Blog Project">
-                    <div class="gallery-overlay">
-                        <h4>Personal Blog</h4>
-                        <p>Student: Medina A.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300&h=200&fit=crop" alt="Restaurant Project">
-                    <div class="gallery-overlay">
-                        <h4>Restaurant Website</h4>
-                        <p>Student: Sanat B.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop" alt="Fitness App">
-                    <div class="gallery-overlay">
-                        <h4>Fitness Tracker</h4>
-                        <p>Student: Shyngys A.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=300&h=200&fit=crop" alt="News Portal">
-                    <div class="gallery-overlay">
-                        <h4>News Portal</h4>
-                        <p>Student: Aida K.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=200&fit=crop" alt="Travel Agency">
-                    <div class="gallery-overlay">
-                        <h4>Travel Agency</h4>
-                        <p>Student: Bekarys M.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop" alt="Online Store">
-                    <div class="gallery-overlay">
-                        <h4>Online Store</h4>
-                        <p>Student: Damir S.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <a href="../header_pages/pricing.html" class="enroll-btn">Enroll Now</a>
     </div>
 </main>
-<footer>
-    <p>Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
+
+<footer class="text-center text-white py-4 mt-5" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+    <div class="container">
+        <p class="mb-0">Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
+    </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
