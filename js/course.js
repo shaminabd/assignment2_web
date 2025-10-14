@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const name = document.getElementById('subName').value;
             const email = document.getElementById('subEmail').value;
-            
+
             if (name && email) {
                 alert('Thank you for subscribing! You will receive updates about our courses.');
                 closeSubscriptionPopup();
@@ -39,4 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.openSubscriptionPopup = openSubscriptionPopup;
     window.closeSubscriptionPopup = closeSubscriptionPopup;
+
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            q.parentElement.classList.toggle('active');
+        });
+    });
 });
