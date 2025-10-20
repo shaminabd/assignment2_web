@@ -18,6 +18,41 @@ body {
     min-height: 100vh;
 }
 
+.dark-mode {
+    background: #0b1220;
+    color: #e5e7eb;
+}
+
+.dark-mode .hero-section {
+    background: linear-gradient(135deg, #0b1220, #111827);
+}
+
+.dark-mode .course-card,
+.dark-mode .video-container,
+.dark-mode .course-content,
+.dark-mode .course-sidebar {
+    background: #0f172a;
+    color: #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.dark-mode .breadcrumb {
+    background: #0f172a;
+    color: #9ca3af;
+}
+
+.dark-mode .course-topics li {
+    background: #0b1220;
+    border-left-color: #1f2937;
+}
+
+.dark-mode .course-sidebar a { color: #9ca3af; }
+.dark-mode .course-sidebar a:hover { background: #111827; color: #93c5fd; }
+
+.dark-mode .gallery-overlay { background: linear-gradient(135deg, rgba(2,6,23,0.95), rgba(17,24,39,0.9)); }
+
+.dark-mode footer { background: linear-gradient(135deg, #0b1220, #111827); }
+
 header {
     background: linear-gradient(135deg, #1e40af, #3b82f6);
     color: #fff;

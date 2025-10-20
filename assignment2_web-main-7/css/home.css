@@ -86,6 +86,7 @@ body {
     background: linear-gradient(135deg, rgba(2, 6, 23, 0.95), rgba(17, 24, 39, 0.9));
 }
 
+/* Rating stars */
 .rating {
     display: inline-flex;
     gap: 0.5rem;
@@ -105,7 +106,7 @@ body {
 }
 
 .rating .star.filled {
-    color: #f59e0b; 
+    color: #f59e0b; /* gold */
 }
 
 .dark-mode .rating .star {
@@ -374,16 +375,21 @@ header nav {
 .stat {
     background: linear-gradient(135deg, #1e40af, #3b82f6);
     color: #fff;
-    padding: 1.2rem 2rem;
+    padding: 1.4rem 2.5rem;
     border-radius: 10px;
     font-weight: 600;
     font-size: 1.2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     flex: 1;
-    min-width: 150px;
-    max-width: 200px;
+    min-width: 200px;
+    max-width: 250px;
     text-align: center;
     transition: all 0.3s;
+}
+
+/* Ensure satisfaction text size matches the others in stats */
+.stats .stat span {
+    font-size: 1.2rem;
 }
 
 .stat:hover {

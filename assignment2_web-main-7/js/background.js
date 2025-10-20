@@ -24,3 +24,4 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem(THEME_KEY, nextTheme);
     });
 });
+
