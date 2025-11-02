@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (isValid) {
+            playClickTone();
             alert("Form submitted successfully!");
             form.reset();
         }
@@ -47,5 +48,34 @@ document.addEventListener("DOMContentLoaded", () => {
         error.style.marginTop = "5px";
         error.textContent = message;
         input.parentElement.appendChild(error);
+    }
+
+    function playClickTone() {
+        try {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+            if (ctx.state === 'suspended') {
+                ctx.resume();
+            }
+
+            const o = ctx.createOscillator();
+            const g = ctx.createGain();
+
+            o.type = 'sine';
+            o.frequency.value = 880;
+
+            g.gain.setValueAtTime(0.3, ctx.currentTime);
+            g.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.15);
+
+            o.connect(g);
+            g.connect(ctx.destination);
+
+            o.start(ctx.currentTime);
+            o.stop(ctx.currentTime + 0.15);
+
+            console.log('Sound played successfully');
+        } catch (err) {
+            console.error('Error playing sound:', err);
+        }
     }
 });
