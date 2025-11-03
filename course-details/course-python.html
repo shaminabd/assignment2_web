@@ -36,28 +36,6 @@
 </nav>
 
 <main class="container-fluid my-4">
-    <div class="card shadow-sm mb-4" id="gallery">
-        <div class="card-header bg-secondary text-white">
-            <h3 class="h5 mb-0">🖼️ Gallery</h3>
-        </div>
-        <div class="card-body">
-            <div class="row mb-3">
-                <div class="col-md-7">
-                    <img id="mainPreview" src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&h=360&fit=crop" class="img-fluid rounded shadow-sm" alt="Preview">
-                </div>
-                <div class="col-md-5">
-                    <div id="imageGallery" class="d-flex flex-wrap gap-2">
-                        <img data-src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb1" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                        <img data-src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb2" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                        <img data-src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb3" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                        <img data-src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb4" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                        <img data-src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb5" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                        <img data-src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb6" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="row g-4">
         <aside class="col-lg-3 col-md-12">
             <div class="card shadow-sm sticky-lg-top" style="top: 80px;">
@@ -210,7 +188,7 @@
                 <div class="card-body">
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="0" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Data Analysis" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Data Analysis Dashboard</h5>
@@ -219,7 +197,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="1" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&h=200&fit=crop" class="card-img-top" alt="Machine Learning" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">ML Prediction Model</h5>
@@ -228,7 +206,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="2" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" class="card-img-top" alt="Web Scraper" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Web Scraping Tool</h5>
@@ -237,7 +215,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="3" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=300&h=200&fit=crop" class="card-img-top" alt="Flask App" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Flask Web Application</h5>
@@ -246,7 +224,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="4" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=200&fit=crop" class="card-img-top" alt="API Development" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">REST API Service</h5>
@@ -255,7 +233,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="5" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Automation Script" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Task Automation Script</h5>
@@ -264,7 +242,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="6" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=300&h=200&fit=crop" class="card-img-top" alt="Game Development" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Python Game</h5>
@@ -273,7 +251,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="7" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&h=200&fit=crop" class="card-img-top" alt="Chat Bot" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">AI Chat Bot</h5>
@@ -282,7 +260,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="8" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Data Visualization" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Data Visualization Tool</h5>
@@ -388,6 +366,7 @@
 <script src="../js/time.js"></script>
 <script src="../js/background.js"></script>
 <script src="../js/course-detail.js"></script>
+<script src="../js/project-modal.js"></script>
 <script src="../js/scroll-progress.js"></script>
 <script src="../js/search-highlight.js"></script>
 <script src="../js/form-spinner.js"></script>

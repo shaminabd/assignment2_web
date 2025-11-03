@@ -186,24 +186,9 @@
                     <h3 class="h5 mb-0">🎨 Student Projects Gallery</h3>
                 </div>
                 <div class="card-body">
-                    <div class="row mb-3">
-                        <div class="col-md-7">
-                            <img id="mainPreview" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=360&fit=crop" class="img-fluid rounded shadow-sm" alt="Preview">
-                        </div>
-                        <div class="col-md-5">
-                            <div id="imageGallery" class="d-flex flex-wrap gap-2">
-                                <img data-src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb1" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                                <img data-src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb2" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                                <img data-src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb3" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                                <img data-src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb4" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                                <img data-src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb5" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                                <img data-src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&h=360&fit=crop" src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=150&h=100&fit=crop" class="img-thumbnail" alt="thumb6" style="cursor:pointer;width:150px;height:100px;object-fit:cover;">
-                            </div>
-                        </div>
-                    </div>
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="0" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=200&fit=crop" class="card-img-top" alt="Banking System" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Banking Management System</h5>
@@ -212,7 +197,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="1" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop" class="card-img-top" alt="E-commerce App" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">E-commerce Application</h5>
@@ -221,7 +206,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="2" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=200&fit=crop" class="card-img-top" alt="Library System" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Library Management System</h5>
@@ -230,7 +215,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="3" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&h=200&fit=crop" class="card-img-top" alt="Student Portal" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Student Portal</h5>
@@ -239,7 +224,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="4" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Hospital System" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Hospital Management</h5>
@@ -248,7 +233,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="5" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" class="card-img-top" alt="Inventory System" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Inventory System</h5>
@@ -257,7 +242,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="6" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300&h=200&fit=crop" class="card-img-top" alt="Restaurant POS" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Restaurant POS System</h5>
@@ -266,7 +251,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="7" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop" class="card-img-top" alt="School Management" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">School Management</h5>
@@ -275,7 +260,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 shadow-sm project-gallery-card" data-project-index="8" style="cursor:pointer;transition:transform 0.3s;">
                                 <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=300&h=200&fit=crop" class="card-img-top" alt="Car Rental" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">Car Rental System</h5>
@@ -381,6 +366,7 @@
 <script src="../js/time.js"></script>
 <script src="../js/background.js"></script>
 <script src="../js/course-detail.js"></script>
+<script src="../js/project-modal.js"></script>
 <script src="../js/scroll-progress.js"></script>
 <script src="../js/search-highlight.js"></script>
 <script src="../js/form-spinner.js"></script>

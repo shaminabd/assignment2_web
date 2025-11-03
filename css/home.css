@@ -68,18 +68,30 @@ body {
 
 .dark-mode .contact-form input,
 .dark-mode .contact-form textarea {
-    background: #0b1220;
-    color: #e5e7eb;
-    border-color: #1f2937;
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
 }
 
 .dark-mode .contact-form input:focus,
 .dark-mode .contact-form textarea:focus {
-    border-color: #60a5fa;
+    background: #0b1220 !important;
+    color: #ffffff !important;
+    border-color: #60a5fa !important;
+    box-shadow: 0 0 0 0.25rem rgba(96, 165, 250, 0.25) !important;
 }
 
 .dark-mode .contact-form button {
-    background: #111827;
+    background: #1e40af !important;
+}
+
+.dark-mode .contact-form input::placeholder,
+.dark-mode .contact-form textarea::placeholder {
+    color: #cbd5e1 !important;
+}
+
+.dark-mode .form-floating label {
+    color: #cbd5e1 !important;
 }
 
 .dark-mode .companies .company-overlay {

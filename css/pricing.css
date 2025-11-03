@@ -24,20 +24,109 @@ body {
     background: linear-gradient(135deg, rgba(2,6,23,0.92), rgba(17,24,39,0.9));
 }
 
-.dark-mode .plan,
-.dark-mode .comparison table,
-.dark-mode details,
-.dark-mode .faq-item {
-    background: #0f172a;
-    color: #e5e7eb;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-}
-
 .dark-mode .price { color: #e5e7eb; }
 .dark-mode .features li { background: #0b1220; color: #e5e7eb; border-left-color: #1f2937; }
 .dark-mode .comparison th { background: #111827; }
-.dark-mode .comparison td { color: #d1d5db; }
 .dark-mode footer { background: linear-gradient(135deg, #0b1220, #111827); }
+.dark-mode details { background: #0f172a; color: #e5e7eb; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); }
+
+body.dark-mode .faq-item {
+    background: #0f172a !important;
+    border-bottom-color: #374151 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .faq-question {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .faq-question::after {
+    color: #60a5fa !important;
+}
+
+body.dark-mode .faq-item.active .faq-question {
+    color: #60a5fa !important;
+}
+
+body.dark-mode .faq-answer {
+    color: #f1f5f9 !important;
+}
+
+.dark-mode summary {
+    color: #f8fafc !important;
+}
+
+.dark-mode details p {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .plan {
+    background: #0f172a !important;
+}
+
+body.dark-mode .plan-head h3 {
+    color: #60a5fa !important;
+}
+
+body.dark-mode .form-select {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+body.dark-mode .form-select:focus {
+    background: #0b1220 !important;
+    border-color: #60a5fa !important;
+    box-shadow: 0 0 0 0.25rem rgba(96, 165, 250, 0.25) !important;
+}
+
+body.dark-mode .table,
+body.dark-mode table.table {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+body.dark-mode .table td,
+body.dark-mode table td,
+body.dark-mode .table th,
+body.dark-mode table th {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #374151 !important;
+}
+
+body.dark-mode .table thead th {
+    background: #111827 !important;
+    color: white !important;
+}
+
+body.dark-mode .table-hover tbody tr:hover td {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+}
+
+body.dark-mode .table tbody tr:nth-child(even) td,
+body.dark-mode table tbody tr:nth-child(even) td,
+body.dark-mode .comparison tbody tr:nth-child(even) td {
+    background-color: #1e293b !important;
+}
+
+.dark-mode .btn {
+    background: #1e40af !important;
+    color: white !important;
+}
+
+.dark-mode .btn-outline-primary {
+    background: transparent !important;
+    border-color: #60a5fa !important;
+    color: #60a5fa !important;
+}
+
+.dark-mode .btn-outline-primary:hover {
+    background: #1e40af !important;
+    border-color: #1e40af !important;
+    color: white !important;
+}
 
 header {
     background: linear-gradient(135deg, #1e40af, #3b82f6);
@@ -151,62 +240,6 @@ header nav {
     max-width: 350px;
     height: 100%;
     transition: all 0.3s;
-}
-.faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    background: #fff;
-    border-radius: 10px;
-    padding: 0.9rem 1rem;
-    margin: 0.6rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.faq-question {
-    cursor: pointer;
-    font-size: 1.05rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: color 0.3s ease;
-    color: #1f2937;
-}
-
-.faq-question::after {
-    content: '+';
-    font-size: 1.5rem;
-    font-weight: 300;
-    transition: transform 0.3s ease;
-    color: #1e40af;
-}
-
-.faq-item.active .faq-question::after {
-    transform: rotate(45deg);
-}
-
-.faq-item.active .faq-question {
-    color: #1e40af;
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.4s ease;
-    font-size: 0.95rem;
-    color: #4b5563;
-    padding-left: 4px;
-}
-
-.faq-item.active .faq-answer {
-    max-height: 300px;
-    opacity: 1;
-    margin-top: 12px;
 }
 
 .plan:hover {
@@ -352,7 +385,7 @@ header nav {
 .faq {
     max-width: 900px;
     margin: 0 auto 3rem;
-    padding: 0 2rem;
+    padding: 0 3rem;
 }
 
 .faq h2 {
@@ -460,7 +493,7 @@ p {
 .faq-item {
     background: #fff;
     border-radius: 10px;
-    padding: 0.9rem 1rem;
+    padding: 1rem 2rem;
     margin: 0.6rem 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
