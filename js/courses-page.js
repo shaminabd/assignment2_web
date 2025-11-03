@@ -34,18 +34,64 @@ document.addEventListener("DOMContentLoaded", () => {
     if (contactForm && contactStatus) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const formData = new FormData(contactForm);
-            const payload = Object.fromEntries(formData.entries());
-            setTimeout(() => {
-                contactStatus.textContent = `Thanks, ${payload.name}. We will contact you at ${payload.email}.`;
-                contactStatus.style.transition = 'transform 300ms ease, opacity 300ms ease';
-                contactStatus.style.transform = 'scale(1.03)';
-                contactStatus.style.opacity = '1';
-                playClickTone();
-                setTimeout(() => { contactStatus.style.transform = 'scale(1)'; }, 320);
-                contactForm.reset();
-            }, 400);
+            
+            document.querySelectorAll('.error-message').forEach((el) => el.remove());
+            
+            const name = document.getElementById('cfName')?.value.trim() || '';
+            const email = document.getElementById('cfEmail')?.value.trim() || '';
+            const message = document.getElementById('cfMsg')?.value.trim() || '';
+            
+            let isValid = true;
+            
+            if (name === '') {
+                showError('cfName', 'Name cannot be empty');
+                isValid = false;
+            }
+            
+            if (!validateEmail(email)) {
+                showError('cfEmail', 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            if (message.length < 10) {
+                showError('cfMsg', 'Message must be at least 10 characters long');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                const formData = new FormData(contactForm);
+                const payload = Object.fromEntries(formData.entries());
+                setTimeout(() => {
+                    contactStatus.textContent = `Thanks, ${payload.name}. We will contact you at ${payload.email}.`;
+                    contactStatus.style.transition = 'transform 300ms ease, opacity 300ms ease';
+                    contactStatus.style.transform = 'scale(1.03)';
+                    contactStatus.style.opacity = '1';
+                    playClickTone();
+                    setTimeout(() => { contactStatus.style.transform = 'scale(1)'; }, 320);
+                    contactForm.reset();
+                }, 400);
+            }
         });
+    }
+    
+    function validateEmail(email) {
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return pattern.test(email);
+    }
+    
+    function showError(id, message) {
+        const input = document.getElementById(id);
+        if (!input) return;
+        const error = document.createElement('small');
+        error.classList.add('error-message');
+        error.style.color = '#dc3545';
+        error.style.display = 'block';
+        error.style.marginTop = '5px';
+        error.textContent = message;
+        const parent = input.parentElement || input.closest('.form-floating');
+        if (parent) {
+            parent.appendChild(error);
+        }
     }
 
     function playClickTone() {

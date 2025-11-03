@@ -15,8 +15,8 @@ body {
 }
 
 .dark-mode {
-    background: #0b1220;
-    color: #e5e7eb;
+    background: #0f172a;
+    color: #f1f5f9;
 }
 
 .dark-mode .hero-section {
@@ -126,6 +126,16 @@ body.dark-mode .comparison tbody tr:nth-child(even) td {
     background: #1e40af !important;
     border-color: #1e40af !important;
     color: white !important;
+}
+
+.dark-mode .error-message {
+    color: #f87171 !important;
+}
+
+.dark-mode p,
+.dark-mode .lead,
+.dark-mode .text-muted {
+    color: #e2e8f0 !important;
 }
 
 header {

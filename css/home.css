@@ -14,10 +14,9 @@ body {
     min-height: 100vh;
 }
 
-/* Dark mode theme */
 .dark-mode {
-    background: #0b1220;
-    color: #e5e7eb;
+    background: #0f172a;
+    color: #f1f5f9;
 }
 
 .dark-mode .navbar,
@@ -92,6 +91,20 @@ body {
 
 .dark-mode .form-floating label {
     color: #cbd5e1 !important;
+}
+
+.dark-mode .error-message {
+    color: #f87171 !important;
+}
+
+.dark-mode p,
+.dark-mode .lead,
+.dark-mode .text-muted {
+    color: #e2e8f0 !important;
+}
+
+.dark-mode .stat {
+    background: linear-gradient(135deg, #1e293b, #334155);
 }
 
 .dark-mode .companies .company-overlay {
