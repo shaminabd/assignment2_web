@@ -239,6 +239,7 @@ header nav {
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .plan {
@@ -301,6 +302,7 @@ header nav {
     list-style: none;
     display: grid;
     gap: 0.6rem;
+    flex-grow: 1;
 }
 
 .features li {
@@ -325,7 +327,7 @@ header nav {
     margin-top: auto;
 }
 
-.btn:hover {
+.btn:hover:not(.btn-primary):not(.btn-outline-primary) {
     transform: translateY(-2px);
     background: linear-gradient(135deg, #e5e7eb, #ffffff) !important;
     color: #1f2937 !important;
@@ -344,14 +346,19 @@ header nav {
     transform: translateY(-2px);
 }
 
+.btn-primary,
 .btn.primary {
-    background: linear-gradient(135deg, #1e40af, #3b82f6);
-    color: #fff;
+    background: linear-gradient(135deg, #1e40af, #3b82f6) !important;
+    color: #fff !important;
+    border: none !important;
     box-shadow: 0 8px 20px rgba(30, 64, 175, 0.35);
 }
 
+.btn-primary:hover,
 .btn.primary:hover {
     transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(135deg, #1e40af, #3b82f6) !important;
+    color: #fff !important;
 }
 
 .plan-testimonial {
