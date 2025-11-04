@@ -111,45 +111,85 @@ body {
     background: linear-gradient(135deg, rgba(2, 6, 23, 0.95), rgba(17, 24, 39, 0.9));
 }
 
+section[aria-label="Rate our platform"] {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 3rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
 .rating {
     display: inline-flex;
-    gap: 0.5rem;
+    gap: 0.75rem;
     cursor: pointer;
     user-select: none;
-    height: 2.6rem;
+    height: 3rem;
     align-items: center;
+    padding: 1rem 1.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .rating .star {
-    font-size: 2.25rem;
-    color: #d1d5db;
-    transition: color 0.2s ease, transform 0.15s ease;
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+    font-size: 2.5rem;
+    color: #e5e7eb;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 .rating .star:hover {
-    transform: scale(1.08);
+    transform: scale(1.2);
+    color: #fbbf24;
 }
 
 .rating .star.filled {
-    color: #f59e0b; 
+    color: #f59e0b;
+    filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.4));
+}
+
+.dark-mode section[aria-label="Rate our platform"] {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.dark-mode .rating {
+    background: #0f172a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode .rating .star {
-    color: #6b7280;
+    color: #475569;
+}
+
+.dark-mode .rating .star:hover {
+    color: #fbbf24;
 }
 
 .dark-mode .rating .star.filled {
     color: #fbbf24;
+    filter: drop-shadow(0 2px 6px rgba(251, 191, 36, 0.5));
 }
 
 #ratingValue {
     height: 1.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     line-height: 1.5rem;
     transition: opacity 0.2s ease;
     white-space: nowrap;
     overflow: hidden;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.dark-mode #ratingValue {
+    color: #94a3b8;
 }
 
 header {
