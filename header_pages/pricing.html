@@ -74,7 +74,7 @@
                 <li class="py-2 px-3 mb-2">Community chat</li>
                 <li class="py-2 px-3 mb-2">No certificate</li>
             </ul>
-            <button class="btn btn-outline-primary mt-auto" onclick="openSubscriptionPopup()">Get Started</button>
+            <button class="btn btn-outline-primary mt-auto" onclick="openPlanModal('starter')">Choose</button>
         </article>
 
         <article class="plan popular p-3" data-plan="pro" data-price="4900">
@@ -89,7 +89,7 @@
                 <li class="py-2 px-3 mb-2">Mentor Q&A (weekly)</li>
                 <li class="py-2 px-3 mb-2">Downloadable resources</li>
             </ul>
-            <button class="btn btn-primary mt-auto" onclick="openSubscriptionPopup()">Go Pro</button>
+            <button class="btn btn-primary mt-auto" onclick="openPlanModal('pro')">Choose</button>
         </article>
 
         <article class="plan p-3" data-plan="team" data-price="12900">
@@ -103,7 +103,7 @@
                 <li class="py-2 px-3 mb-2">Custom deadlines & reports</li>
                 <li class="py-2 px-3 mb-2">Team progress dashboard</li>
             </ul>
-            <button class="btn btn-outline-primary mt-auto" onclick="openSubscriptionPopup()">Contact Us</button>
+            <button class="btn btn-outline-primary mt-auto" onclick="openPlanModal('team')">Choose</button>
         </article>
 
         <article class="plan p-3" data-plan="student" data-price="1900">
@@ -116,7 +116,7 @@
                 <li class="py-2 px-3 mb-2">Extra quizzes</li>
                 <li class="py-2 px-3 mb-2">Priority support</li>
             </ul>
-            <button class="btn btn-outline-primary mt-auto" onclick="openSubscriptionPopup()">Choose</button>
+            <button class="btn btn-outline-primary mt-auto" onclick="openPlanModal('student')">Choose</button>
         </article>
 
         <article class="plan p-3" data-plan="mentor" data-price="7900">
@@ -129,7 +129,7 @@
                 <li class="py-2 px-3 mb-2">1:1 reviews</li>
                 <li class="py-2 px-3 mb-2">Career prep</li>
             </ul>
-            <button class="btn btn-outline-primary mt-auto" onclick="openSubscriptionPopup()">Choose</button>
+            <button class="btn btn-outline-primary mt-auto" onclick="openPlanModal('mentor')">Choose</button>
         </article>
 
         <article class="plan p-3" data-plan="enterprise" data-price="0">
@@ -142,7 +142,7 @@
                 <li class="py-2 px-3 mb-2">Custom onboarding</li>
                 <li class="py-2 px-3 mb-2">Admin tools</li>
             </ul>
-            <button class="btn btn-outline-primary mt-auto" onclick="openSubscriptionPopup()">Contact Sales</button>
+            <button class="btn btn-outline-primary mt-auto" onclick="openPlanModal('enterprise')">Choose</button>
         </article>
     </section>
 
@@ -219,6 +219,29 @@
     </section>
 </main>
 
+<div id="planModal" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h3 id="planModalTitle">Choose Plan</h3>
+            <button class="close-btn" onclick="closePlanModal()">&times;</button>
+        </div>
+        <div class="popup-body">
+            <p id="planModalDescription">Please provide your information to proceed with this plan.</p>
+            <form id="planForm" novalidate>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="planName" placeholder="Your Name" required>
+                    <label for="planName">Your Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="planEmail" placeholder="Your Email" required>
+                    <label for="planEmail">Your Email</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 <footer class="text-center text-white py-4 mt-auto">
     <p class="mb-0">Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
     <p id="datetime" class="mt-2"></p>
@@ -233,5 +256,6 @@
 <script src="../js/scroll-progress.js"></script>
 <script src="../js/copy-clipboard.js"></script>
 <script src="../js/toast-notification.js"></script>
+<script src="../js/pricing-modal.js"></script>
 </body>
 </html>
