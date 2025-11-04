@@ -404,7 +404,7 @@ header nav {
     margin: 3rem 0;
     padding: 0 2rem;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
 }
 
 .stat {

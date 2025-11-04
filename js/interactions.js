@@ -13,8 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const timeOutput = document.getElementById("timeOutput");
     if (showTimeBtn && timeOutput) {
         showTimeBtn.addEventListener("click", () => {
-            const now = new Date().toLocaleTimeString();
-            timeOutput.textContent = now;
+            const isHidden = timeOutput.style.display === "none" || timeOutput.style.display === "" || !timeOutput.textContent;
+            if (isHidden) {
+                const now = new Date().toLocaleTimeString();
+                timeOutput.textContent = now;
+                timeOutput.style.display = "block";
+                showTimeBtn.textContent = "Hide Current Time";
+            } else {
+                timeOutput.style.display = "none";
+                showTimeBtn.textContent = "Show Current Time";
+            }
         });
     }
 });
