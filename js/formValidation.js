@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (isValid) {
             playClickTone();
-            alert("Form submitted successfully!");
+            if (typeof showToast === 'function') {
+                showToast('Form submitted successfully!', 'success');
+            }
             form.reset();
         }
     });
@@ -52,30 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function playClickTone() {
         try {
-            const ctx = new (window.AudioContext || window.webkitAudioContext)();
-
-            if (ctx.state === 'suspended') {
-                ctx.resume();
-            }
-
-            const o = ctx.createOscillator();
-            const g = ctx.createGain();
-
-            o.type = 'sine';
-            o.frequency.value = 880;
-
-            g.gain.setValueAtTime(0.3, ctx.currentTime);
-            g.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.15);
-
-            o.connect(g);
-            g.connect(ctx.destination);
-
-            o.start(ctx.currentTime);
-            o.stop(ctx.currentTime + 0.15);
-
-            console.log('Sound played successfully');
-        } catch (err) {
-            console.error('Error playing sound:', err);
-        }
+            const sources = [
+                'images/audio/e1axmfsi497-right-answer-sfx-8.mp3',
+                '../images/audio/e1axmfsi497-right-answer-sfx-8.mp3'
+            ];
+            const audio = new Audio();
+            audio.volume = 0.25;
+            const tryPlay = (i) => {
+                if (i >= sources.length) return;
+                audio.src = sources[i];
+                audio.play().catch(() => tryPlay(i + 1));
+            };
+            tryPlay(0);
+        } catch (_) {}
     }
 });

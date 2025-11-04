@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+    function playClickTone() {
+        try {
+            const sources = [
+                '../images/audio/e1axmfsi497-right-answer-sfx-8.mp3',
+                'images/audio/e1axmfsi497-right-answer-sfx-8.mp3'
+            ];
+            const audio = new Audio();
+            audio.volume = 0.5;
+            const tryPlay = (i) => {
+                if (i >= sources.length) return;
+                audio.src = sources[i];
+                audio.play().catch(() => tryPlay(i + 1));
+            };
+            tryPlay(0);
+        } catch (_) {}
+    }
     function openSubscriptionPopup() {
         const popup = document.getElementById('subscriptionPopup');
         if (popup) {
@@ -36,7 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             
             if (isValid) {
-                alert('Thank you for subscribing! You will receive updates about our courses.');
+                playClickTone();
+                if (typeof showToast === 'function') {
+                    showToast('Subscribed! You will receive course updates.', 'success');
+                }
                 closeSubscriptionPopup();
                 subscriptionForm.reset();
             }

@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentRating = 0;
     const labels = { 1: "Poor", 2: "Fair", 3: "Good", 4: "Very good", 5: "Excellent!" };
 
-    function render(rating) {
+    let rafId = null;
+
+    function renderNow(rating) {
         stars.forEach((starEl, idx) => {
             const fill = idx < rating;
             starEl.classList.toggle("filled", fill);
@@ -21,6 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function render(rating) {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(() => renderNow(rating));
+    }
+
     function handleHover(index) {
         render(index + 1);
     }
@@ -32,6 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleClick(index) {
         currentRating = index + 1;
         render(currentRating);
+        try {
+            const star = stars[index];
+            star.style.transition = 'transform 150ms ease';
+            star.style.transform = 'scale(1.15)';
+            setTimeout(() => { star.style.transform = 'scale(1)'; }, 160);
+        } catch (_) {}
+        if (typeof showToast === 'function') {
+            const label = labels[currentRating] || '';
+            showToast(`Thanks! Rated ${currentRating}/5 ${label ? '— ' + label : ''}`, 'success');
+        }
     }
 
     stars.forEach((starEl, index) => {

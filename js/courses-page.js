@@ -58,6 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 isValid = false;
             }
             
+            if (!isValid) {
+                if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+                return false;
+            }
+
             if (isValid) {
                 const formData = new FormData(contactForm);
                 const payload = Object.fromEntries(formData.entries());
@@ -67,6 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     contactStatus.style.transform = 'scale(1.03)';
                     contactStatus.style.opacity = '1';
                     playClickTone();
+                    if (typeof showToast === 'function') {
+                        showToast('Message sent successfully!', 'success');
+                    }
                     setTimeout(() => { contactStatus.style.transform = 'scale(1)'; }, 320);
                     contactForm.reset();
                 }, 400);
@@ -96,17 +104,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function playClickTone() {
         try {
-            const ctx = new (window.AudioContext || window.webkitAudioContext)();
-            const o = ctx.createOscillator();
-            const g = ctx.createGain();
-            o.type = 'sine';
-            o.frequency.value = 880;
-            g.gain.value = 0.001;
-            o.connect(g);
-            g.connect(ctx.destination);
-            o.start();
-            g.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime + 0.12);
-            o.stop(ctx.currentTime + 0.13);
+            const sources = [
+                '../images/audio/e1axmfsi497-right-answer-sfx-8.mp3',
+                'images/audio/e1axmfsi497-right-answer-sfx-8.mp3'
+            ];
+            const audio = new Audio();
+            audio.volume = 0.5;
+            const tryPlay = (i) => {
+                if (i >= sources.length) return;
+                audio.src = sources[i];
+                audio.play().catch(() => tryPlay(i + 1));
+            };
+            tryPlay(0);
         } catch (_) {}
     }
 

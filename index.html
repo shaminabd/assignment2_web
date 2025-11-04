@@ -180,13 +180,13 @@
     <section class="contact-form my-5 mx-auto p-4">
         <h2 class="mb-3">Get in Touch</h2>
         <p class="mb-4">Have questions? Want to join our courses? Send us a message!</p>
-        <form aria-label="Contact form">
+        <form aria-label="Contact form" novalidate>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nameInput" placeholder="Your Name" required>
+                <input type="text" class="form-control" id="nameInput" placeholder="Your Name">
                 <label for="nameInput">Your Name</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="emailInput" placeholder="Your Email" required>
+                <input type="email" class="form-control" id="emailInput" placeholder="Your Email">
                 <label for="emailInput">Your Email</label>
             </div>
             <div class="form-floating mb-3">
@@ -194,7 +194,7 @@
                 <label for="studentIdInput">Student ID (optional)</label>
             </div>
             <div class="form-floating mb-3">
-                <textarea class="form-control" id="messageTextarea" placeholder="Your Message" style="height: 120px" required></textarea>
+                <textarea class="form-control" id="messageTextarea" placeholder="Your Message" style="height: 120px"></textarea>
                 <label for="messageTextarea">Your Message</label>
             </div>
             <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>

@@ -116,6 +116,8 @@ body {
     gap: 0.5rem;
     cursor: pointer;
     user-select: none;
+    height: 2.6rem;
+    align-items: center;
 }
 
 .rating .star {
@@ -139,6 +141,15 @@ body {
 
 .dark-mode .rating .star.filled {
     color: #fbbf24;
+}
+
+#ratingValue {
+    height: 1.5rem;
+    margin-top: 0.5rem;
+    line-height: 1.5rem;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 header {

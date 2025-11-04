@@ -1,5 +1,8 @@
 $(document).ready(function() {
     $('.contact-form form').on('submit', function(e) {
+        if (!this.checkValidity() || document.querySelector('.error-message')) {
+            return;
+        }
         e.preventDefault();
         const $form = $(this);
         const $submitBtn = $form.find('button[type="submit"]');
@@ -12,16 +15,14 @@ $(document).ready(function() {
 
         setTimeout(function() {
             $submitBtn.html(originalText).prop('disabled', false);
-            
-            if (typeof showToast === 'function') {
-                showToast('Form submitted successfully!', 'success');
-            }
-            
             $form[0].reset();
         }, 2000);
     });
 
     $('#contactForm').on('submit', function(e) {
+        if (!this.checkValidity() || document.querySelector('.error-message')) {
+            return;
+        }
         e.preventDefault();
         const $form = $(this);
         const $submitBtn = $form.find('button[type="submit"]');
@@ -34,16 +35,14 @@ $(document).ready(function() {
 
         setTimeout(function() {
             $submitBtn.html(originalText).prop('disabled', false);
-            
-            if (typeof showToast === 'function') {
-                showToast('Form submitted successfully!', 'success');
-            }
-            
             $form[0].reset();
         }, 2000);
     });
 
     $('#subscriptionForm').on('submit', function(e) {
+        if (!this.checkValidity() || document.querySelector('.error-message')) {
+            return;
+        }
         e.preventDefault();
         const $form = $(this);
         const $submitBtn = $form.find('button[type="submit"]');
@@ -56,11 +55,6 @@ $(document).ready(function() {
 
         setTimeout(function() {
             $submitBtn.html(originalText).prop('disabled', false);
-            
-            if (typeof showToast === 'function') {
-                showToast('Subscribed successfully!', 'success');
-            }
-            
             if (typeof closeSubscriptionPopup === 'function') {
                 closeSubscriptionPopup();
             }
