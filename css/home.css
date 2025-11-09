@@ -19,6 +19,79 @@ body {
     color: #f1f5f9;
 }
 
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: #f8fafc;
+}
+
+.dark-mode .section-title,
+.dark-mode .section-subtitle,
+.dark-mode .text-primary,
+.dark-mode .text-highlight,
+.dark-mode #whyTitle {
+    color: #dbeafe !important;
+}
+
+.dark-mode .features h2,
+.dark-mode .about h2,
+.dark-mode .testimonials h2,
+.dark-mode .companies h2,
+.dark-mode .contact-form h2 {
+    color: #f8fafc !important;
+}
+
+.dark-mode .about p,
+.dark-mode .feature-card,
+.dark-mode .feature-card span,
+.dark-mode .testimonial p,
+.dark-mode .member p,
+.dark-mode .contact-form p {
+    color: #e2e8f0 !important;
+}
+
+.dark-mode .member h3 {
+    color: #f8fafc !important;
+}
+
+.dark-mode a {
+    color: #bfdbfe;
+}
+
+.dark-mode a:hover,
+.dark-mode a:focus {
+    color: #fbbf24;
+}
+
+.dark-mode .nav-links a {
+    color: #e2e8f0;
+}
+
+.dark-mode .nav-links a:hover,
+.dark-mode .nav-links a.active {
+    color: #fbbf24;
+    background: rgba(148, 163, 184, 0.18);
+}
+
+.dark-mode .feature-card h3,
+.dark-mode .feature-card p {
+    color: #e2e8f0;
+}
+
+.dark-mode .testimonial h3,
+.dark-mode .testimonial span {
+    color: #e2e8f0;
+}
+
+.dark-mode .stat strong,
+.dark-mode .stat span,
+.dark-mode .stat p {
+    color: #f8fafc;
+}
+
 .dark-mode .navbar,
 .dark-mode footer {
     background: linear-gradient(135deg, #0b1220, #111827);
@@ -292,6 +365,34 @@ header nav {
     background: #fff;
     color: #1e40af;
     transform: translateY(-2px) scale(1.02);
+}
+
+.hero-section .btn.btn-warning {
+    background: #ffffff;
+    color: #1e40af;
+    border: 2px solid #1e40af;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-section .btn.btn-warning:hover,
+.hero-section .btn.btn-warning:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(30, 64, 175, 0.25);
+}
+
+.dark-mode .hero-section .btn.btn-warning {
+    background: #2563eb;
+    color: #f8fafc;
+    border-color: #3b82f6;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+.dark-mode .hero-section .btn.btn-warning:hover,
+.dark-mode .hero-section .btn.btn-warning:focus {
+    background: #1d4ed8;
+    border-color: #2563eb;
+    box-shadow: 0 12px 28px rgba(29, 78, 216, 0.45);
 }
 
 .features {

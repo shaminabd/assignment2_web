@@ -19,6 +19,61 @@ body {
     color: #f1f5f9;
 }
 
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: #f8fafc;
+}
+
+.dark-mode a {
+    color: #bfdbfe;
+    transition: color 0.2s ease;
+}
+
+.dark-mode a:hover,
+.dark-mode a:focus {
+    color: #fbbf24;
+}
+
+.dark-mode .nav-links a {
+    color: #e2e8f0;
+}
+
+.dark-mode .nav-links a:hover,
+.dark-mode .nav-links a.active {
+    color: #fbbf24;
+    background: rgba(148, 163, 184, 0.18);
+}
+
+.dark-mode .hero-section p,
+.dark-mode .plan-head h3,
+.dark-mode .plan-testimonial,
+.dark-mode .features li,
+.dark-mode .comparison td,
+.dark-mode .comparison h2,
+.dark-mode .promo-banner,
+.dark-mode details p,
+.dark-mode .faq-question,
+.dark-mode .faq-answer {
+    color: #e2e8f0 !important;
+}
+
+.dark-mode .comparison td:first-child {
+    color: #f8fafc !important;
+}
+
+.dark-mode .price,
+.dark-mode .price small {
+    color: #f8fafc !important;
+}
+
+.dark-mode summary {
+    color: #f8fafc !important;
+}
+
 .dark-mode .hero-section {
     color: #e5e7eb;
     background: linear-gradient(135deg, rgba(2,6,23,0.92), rgba(17,24,39,0.9));
