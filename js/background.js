@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function applyTheme(theme) {
         const isDark = theme === "dark";
         document.body.classList.toggle("dark-mode", isDark);
-        themeBtn.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+        themeBtn.classList.toggle("is-dark", isDark);
+        themeBtn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
     }
 
     const saved = localStorage.getItem(THEME_KEY);

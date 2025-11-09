@@ -229,12 +229,115 @@ header nav {
     color: #fbbf24;
 }
 
+.theme-toggle-btn {
+    width: 54px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.theme-toggle-btn:focus-visible {
+    outline: 2px solid #fbbf24;
+    outline-offset: 4px;
+}
+
+.theme-toggle-btn .toggle-track {
+    width: 100%;
+    height: 100%;
+    background: #e2e8f0;
+    border-radius: 999px;
+    position: relative;
+    box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.6);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-toggle-btn .toggle-track::before,
+.theme-toggle-btn .toggle-track::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+    transition: opacity 0.3s ease;
+}
+
+.theme-toggle-btn .toggle-track::before {
+    content: "☀️";
+    left: 8px;
+    opacity: 1;
+}
+
+.theme-toggle-btn .toggle-track::after {
+    content: "🌙";
+    right: 8px;
+    opacity: 0;
+}
+
+.theme-toggle-btn .toggle-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #f8fafc;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.theme-toggle-btn:hover .toggle-track {
+    box-shadow: inset 0 0 0 1px rgba(30, 64, 175, 0.4);
+}
+
+.theme-toggle-btn.is-dark .toggle-track {
+    background: #1e3a8a;
+    box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.45);
+}
+
+.theme-toggle-btn.is-dark .toggle-track::before {
+    opacity: 0;
+}
+
+.theme-toggle-btn.is-dark .toggle-track::after {
+    opacity: 1;
+}
+
+.theme-toggle-btn.is-dark .toggle-thumb {
+    transform: translateX(24px);
+    background: #fbbf24;
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.35);
+}
+
+.navbar .theme-toggle-btn {
+    margin-left: 1rem;
+}
+
+@media (max-width: 991px) {
+    .navbar .theme-toggle-btn {
+        margin: 1rem 0 0 0;
+    }
+}
+
 main {
     flex: 1;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     width: 100%;
+}
+
+.course-detail-page {
+    max-width: 1200px;
+}
+
+.course-detail-row {
+    align-items: flex-start;
 }
 
 .hero-section {
@@ -244,6 +347,28 @@ main {
     color: white;
     border-radius: 15px;
     margin-bottom: 2rem;
+}
+
+.hero-section .btn {
+    min-width: 210px;
+    padding: 0.95rem 2.2rem;
+    border-radius: 0.85rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 576px) {
+    .hero-section .btn {
+        min-width: 160px;
+        padding: 0.75rem 1.6rem;
+        font-size: 0.95rem;
+        border-radius: 0.75rem;
+    }
+
+    .hero-section label[for="langSelect"] {
+        display: none;
+    }
 }
 
 .hero-section h1 {
@@ -284,6 +409,44 @@ main {
 .course-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.course-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.course-btn {
+    padding: 0.9rem 2.2rem;
+    border-radius: 0.85rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    min-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-btn.btn-primary {
+    box-shadow: 0 10px 24px rgba(30, 64, 175, 0.28);
+}
+
+.course-btn.btn-success {
+    box-shadow: 0 10px 24px rgba(34, 197, 94, 0.25);
+}
+
+.dark-mode .course-btn.btn-primary {
+    box-shadow: 0 12px 28px rgba(96, 165, 250, 0.35);
+}
+
+.dark-mode .course-btn.btn-success {
+    box-shadow: 0 12px 28px rgba(74, 222, 128, 0.35);
+}
+
+.course-btn:hover,
+.course-btn:focus {
+    transform: translateY(-2px);
 }
 
 .course-card img {
@@ -585,6 +748,16 @@ main {
         max-width: 100%;
         width: 100%;
     }
+
+    .course-cta {
+        gap: 1rem;
+    }
+
+    .course-btn {
+        min-width: 180px;
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -600,6 +773,23 @@ main {
     .course-sidebar a {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .course-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .course-btn {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        min-width: 0;
+        padding: 0.75rem 1.4rem;
+        font-size: 0.95rem;
+        border-radius: 0.7rem;
     }
 }
 
