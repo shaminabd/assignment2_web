@@ -814,6 +814,8 @@ p {
     align-items: center;
     transition: color 0.3s ease;
     color: #1f2937;
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
 }
 
 .faq-question::after {
