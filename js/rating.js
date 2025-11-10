@@ -45,10 +45,26 @@ document.addEventListener("DOMContentLoaded", () => {
             star.style.transform = 'scale(1.15)';
             setTimeout(() => { star.style.transform = 'scale(1)'; }, 160);
         } catch (_) {}
+
+        // Save rating to local storage
+        saveRating(currentRating);
+
         if (typeof showToast === 'function') {
             const label = labels[currentRating] || '';
             showToast(`Thanks! Rated ${currentRating}/5 ${label ? '— ' + label : ''}`, 'success');
         }
+    }
+
+    // Save rating to local storage
+    function saveRating(rating) {
+        const ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+        const newRating = {
+            rating: rating,
+            name: 'Platform Experience',
+            timestamp: new Date().toISOString()
+        };
+        ratings.push(newRating);
+        localStorage.setItem('ratings', JSON.stringify(ratings));
     }
 
     stars.forEach((starEl, index) => {

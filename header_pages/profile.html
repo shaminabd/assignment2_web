@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - MacOStar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css?v=4">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .profile-header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 20px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .profile-info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .profile-info-row:last-child {
+            border-bottom: none;
+        }
+
+        .profile-label {
+            font-weight: 600;
+            color: #1e40af;
+        }
+
+        .profile-value {
+            color: #4b5563;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-action {
+            flex: 1;
+            min-width: 150px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-action {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+        }
+
+        .btn-primary-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);
+        }
+
+        .btn-secondary-action {
+            background: #f3f4f6;
+            color: #1e40af;
+            border: 2px solid #3b82f6;
+        }
+
+        .btn-secondary-action:hover {
+            background: #e5e7eb;
+        }
+
+        .btn-danger-action {
+            background: #fee2e2;
+            color: #dc2626;
+            border: 2px solid #fca5a5;
+        }
+
+        .btn-danger-action:hover {
+            background: #fecaca;
+        }
+
+        .activity-section {
+            background: #f9fafb;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .activity-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .dark-mode .profile-card,
+        .dark-mode .activity-section {
+            background: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .dark-mode .profile-info-row {
+            border-bottom-color: #334155;
+        }
+
+        .dark-mode .profile-label {
+            color: #93c5fd;
+        }
+
+        .dark-mode .profile-value {
+            color: #cbd5e1;
+        }
+
+        .dark-mode .activity-section {
+            background: #0f172a;
+        }
+
+        .dark-mode .activity-item {
+            border-bottom-color: #334155;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+    <div class="container-fluid px-lg-5">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="MacOStar Home">
+            <span class="apple-logo me-2" aria-hidden="true">🍎</span> MacOStar
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav gap-2 mb-2 mb-lg-0 me-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="course-list.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                </li>
+            </ul>
+            <button id="themeBtn" class="theme-toggle-btn" type="button" aria-label="Switch to dark mode">
+                <span class="toggle-track">
+                    <span class="toggle-thumb"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <div id="loginPrompt" style="display: none;">
+        <div class="alert alert-warning" role="alert">
+            <h4 class="alert-heading">Not Logged In</h4>
+            <p>You need to be logged in to view your profile. Please <a href="auth.html" class="alert-link">sign in here</a>.</p>
+        </div>
+    </div>
+
+    <div id="profileContent" style="display: none;">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-avatar">👤</div>
+            <h1 id="profileName" class="mb-1"></h1>
+            <p id="profileEmail" class="mb-0"></p>
+        </div>
+
+        <!-- Account Information -->
+        <div class="profile-card">
+            <h3 class="mb-4">📋 Account Information</h3>
+            <div class="profile-info-row">
+                <span class="profile-label">Full Name:</span>
+                <span class="profile-value" id="infoName"></span>
+            </div>
+            <div class="profile-info-row">
+                <span class="profile-label">Email:</span>
+                <span class="profile-value" id="infoEmail"></span>
+            </div>
+            <div class="profile-info-row">
+                <span class="profile-label">Member Since:</span>
+                <span class="profile-value" id="infoCreated"></span>
+            </div>
+        </div>
+
+        <!-- Activity -->
+        <div class="profile-card">
+            <h3 class="mb-4">⭐ Recent Ratings</h3>
+            <div class="activity-section" id="ratingsActivity">
+                <p class="text-muted">No ratings yet. Start rating courses to see them here!</p>
+            </div>
+        </div>
+
+        <!-- Search History -->
+        <div class="profile-card">
+            <h3 class="mb-4">🔍 Recent Searches</h3>
+            <div class="activity-section" id="searchActivity">
+                <p class="text-muted">No searches yet. Try searching for courses!</p>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="profile-card">
+            <h3 class="mb-4">⚙️ Actions</h3>
+            <div class="action-buttons">
+                <button class="btn-action btn-primary-action" onclick="goToCourses()">
+                    📚 Browse Courses
+                </button>
+                <button class="btn-action btn-secondary-action" onclick="clearDataConfirm()">
+                    🗑️ Clear Local Data
+                </button>
+                <button class="btn-action btn-danger-action" onclick="logoutConfirm()">
+                    🚪 Logout
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center text-white py-4 mt-auto">
+    <p class="mb-0">Team Name: MacOStar | Abdullayev Shynggys, Bogenbayev Sanat | Group: SE-2409</p>
+    <p id="datetime" class="mt-2"></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/jquery-init.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/auth-ui.js"></script>
+<script src="../js/background.js"></script>
+<script src="../js/time.js"></script>
+<script src="../js/toast-notification.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if user is logged in
+        if (!auth.isLoggedIn()) {
+            document.getElementById('loginPrompt').style.display = 'block';
+            document.getElementById('profileContent').style.display = 'none';
+            return;
+        }
+
+        document.getElementById('loginPrompt').style.display = 'none';
+        document.getElementById('profileContent').style.display = 'block';
+
+        // Load and display user information
+        const user = auth.getCurrentUser();
+        document.getElementById('profileName').textContent = user.name;
+        document.getElementById('profileEmail').textContent = user.email;
+        document.getElementById('infoName').textContent = user.name;
+        document.getElementById('infoEmail').textContent = user.email;
+        document.getElementById('infoCreated').textContent = new Date(user.createdAt).toLocaleDateString();
+
+        // Load ratings from local storage
+        loadRatings();
+
+        // Load search history
+        loadSearchHistory();
+    });
+
+    function loadRatings() {
+        const ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+        const ratingsContainer = document.getElementById('ratingsActivity');
+
+        if (ratings.length === 0) {
+            ratingsContainer.innerHTML = '<p class="text-muted">No ratings yet. Start rating courses to see them here!</p>';
+            return;
+        }
+
+        let ratingsHTML = '';
+        ratings.slice().reverse().forEach(rating => {
+            const stars = '⭐'.repeat(rating.rating);
+            ratingsHTML += `
+                <div class="activity-item">
+                    <small class="text-muted">${new Date(rating.timestamp).toLocaleDateString()}</small><br>
+                    <strong>${rating.name}</strong> - ${stars} (${rating.rating}/5)
+                </div>
+            `;
+        });
+
+        ratingsContainer.innerHTML = ratingsHTML;
+    }
+
+    function loadSearchHistory() {
+        const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+        const searchContainer = document.getElementById('searchActivity');
+
+        if (searchHistory.length === 0) {
+            searchContainer.innerHTML = '<p class="text-muted">No searches yet. Try searching for courses!</p>';
+            return;
+        }
+
+        let searchHTML = '';
+        searchHistory.slice().reverse().slice(0, 10).forEach(search => {
+            searchHTML += `
+                <div class="activity-item">
+                    <small class="text-muted">${new Date(search.timestamp).toLocaleDateString()}</small><br>
+                    <strong>🔍 ${search.query}</strong> - ${search.results} results
+                </div>
+            `;
+        });
+
+        searchContainer.innerHTML = searchHTML;
+    }
+
+    function goToCourses() {
+        window.location.href = 'course-list.html';
+    }
+
+    function clearDataConfirm() {
+        if (confirm('Are you sure? This will clear all your ratings and search history.')) {
+            localStorage.removeItem('ratings');
+            localStorage.removeItem('searchHistory');
+            if (typeof showToast === 'function') {
+                showToast('Local data cleared!', 'success');
+            }
+            location.reload();
+        }
+    }
+
+    function logoutConfirm() {
+        if (confirm('Are you sure you want to logout?')) {
+            auth.logout();
+            if (typeof showToast === 'function') {
+                showToast('Logged out successfully!', 'success');
+            }
+            setTimeout(() => {
+                window.location.href = '../index.html';
+            }, 1000);
+        }
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,89 @@
+// ============================================
+// Authentication UI Handler
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateAuthUI();
+});
+
+// Get correct relative path based on current page location
+function getAuthPath() {
+    const currentPath = window.location.pathname;
+    
+    // If in header_pages folder
+    if (currentPath.includes('/header_pages/')) {
+        return 'auth.html';
+    }
+    // If in course-details folder
+    else if (currentPath.includes('/course-details/')) {
+        return '../header_pages/auth.html';
+    }
+    // If in root (index.html)
+    else {
+        return 'header_pages/auth.html';
+    }
+}
+
+function getProfilePath() {
+    const currentPath = window.location.pathname;
+    
+    // If in header_pages folder
+    if (currentPath.includes('/header_pages/')) {
+        return 'profile.html';
+    }
+    // If in course-details folder
+    else if (currentPath.includes('/course-details/')) {
+        return '../header_pages/profile.html';
+    }
+    // If in root (index.html)
+    else {
+        return 'header_pages/profile.html';
+    }
+}
+
+// Update navbar with login/logout buttons
+function updateAuthUI() {
+    const navbarNav = document.querySelector('.collapse.navbar-collapse');
+    if (!navbarNav) return;
+
+    let authHTML = document.getElementById('authButtons');
+    if (authHTML) authHTML.remove();
+
+    const authDiv = document.createElement('div');
+    authDiv.id = 'authButtons';
+    authDiv.className = 'd-flex gap-2 align-items-center ms-3 auth-buttons-container';
+
+    const authPath = getAuthPath();
+    const profilePath = getProfilePath();
+
+    if (auth.isLoggedIn()) {
+        const user = auth.getCurrentUser();
+        authDiv.innerHTML = `
+            <small class="text-white d-none d-md-inline">Welcome, ${user.name}!</small>
+            <a href="${profilePath}" class="btn btn-sm btn-light auth-profile-btn" title="View your profile">👤 Profile</a>
+            <button onclick="handleLogout()" class="btn btn-sm btn-warning auth-logout-btn" title="Log out">🚪 Logout</button>
+        `;
+    } else {
+        authDiv.innerHTML = `
+            <a href="${authPath}" class="btn btn-sm btn-light auth-btn" title="Sign up or log in">🔐 Auth</a>
+        `;
+    }
+
+    navbarNav.appendChild(authDiv);
+}
+
+// Handle logout
+function handleLogout() {
+    if (confirm('Are you sure you want to log out?')) {
+        auth.logout();
+        if (typeof showToast === 'function') {
+            showToast('Logged out successfully!', 'success');
+        }
+        updateAuthUI();
+        // Redirect to home if on profile page
+        if (window.location.pathname.includes('profile.html')) {
+            window.location.href = 'index.html';
+        }
+    }
+}
+

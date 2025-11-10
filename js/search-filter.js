@@ -31,18 +31,23 @@ $(document).ready(function() {
     $searchInput.on('keyup', function() {
         const searchTerm = $(this).val().toLowerCase().trim();
         
+        let resultCount = 0;
         $courseCards.each(function() {
             const $card = $(this);
             const cardText = $card.text().toLowerCase();
             
             if (cardText.includes(searchTerm) || searchTerm === '') {
                 $card.fadeIn(300);
+                resultCount++;
             } else {
                 $card.fadeOut(300);
             }
         });
 
+        // Save search to local storage
         if (searchTerm.length > 0) {
+            saveSearchHistory(searchTerm, resultCount);
+
             const matches = courses.filter(course => 
                 course.name.toLowerCase().includes(searchTerm) ||
                 course.keywords.some(kw => kw.includes(searchTerm))
@@ -65,6 +70,28 @@ $(document).ready(function() {
             $autocomplete.fadeOut(200);
         }
     });
+
+    // Save search history to local storage
+    function saveSearchHistory(query, results) {
+        const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+        
+        // Only save if it's a new search or different from the last one
+        const lastSearch = searchHistory[searchHistory.length - 1];
+        if (!lastSearch || lastSearch.query !== query) {
+            searchHistory.push({
+                query: query,
+                results: results,
+                timestamp: new Date().toISOString()
+            });
+            
+            // Keep only last 50 searches
+            if (searchHistory.length > 50) {
+                searchHistory.shift();
+            }
+            
+            localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+        }
+    }
 
     $(document).on('click', '.autocomplete-item', function(e) {
         e.preventDefault();
