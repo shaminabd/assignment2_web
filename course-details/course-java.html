@@ -51,9 +51,11 @@
                     <nav class="nav flex-column gap-2">
                         <a class="nav-link text-primary" href="#video">📹 Video Introduction</a>
                         <a class="nav-link text-primary" href="#topics">📚 What You'll Learn</a>
-                        <a class="nav-link text-primary" href="#projects">💻 Course Structure</a>
+                        <a class="nav-link text-primary" href="#projects">💻 Course Projects</a>
                         <a class="nav-link text-primary" href="#timeline">📅 Course Timeline</a>
-                        <a class="nav-link text-primary" href="#gallery">🎨 Student Gallery</a>
+                        <a class="nav-link text-primary" href="#books">📖 Recommended Books</a>
+                        <a class="nav-link text-primary" href="#gallery">🎨 Student Projects Gallery</a>
+                        <a class="nav-link text-primary" href="#faq">❓ Frequently Asked Questions</a>
                     </nav>
                 </div>
             </div>
@@ -134,7 +136,7 @@
 
             <div class="card shadow-sm mb-4" id="projects">
                 <div class="card-header bg-info text-white">
-                    <h3 class="h5 mb-0">💻 Course Structure</h3>
+                    <h3 class="h5 mb-0">💻 Course Projects</h3>
                 </div>
                 <div class="card-body">
                     <div class="row g-3">
@@ -181,6 +183,25 @@
                         <div class="alert alert-warning border-start border-4 border-warning mb-0" role="alert">
                             <strong>Week 5-6:</strong> Advanced Java and Real-World Applications
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="books" class="card shadow-sm mb-4 recommended-books-card" data-books-topic="java programming" data-books-max="6">
+                <div class="card-header bg-light text-dark">
+                    <h3 class="h5 mb-0">📖 Recommended Books</h3>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-4">
+                        Strengthen your Java knowledge with highly rated books tailored to this course.
+                    </p>
+                    <div class="recommended-books-grid" role="list" aria-live="polite">
+                        <div class="recommended-books-placeholder">
+                            Loading book recommendations...
+                        </div>
+                    </div>
+                    <div class="alert alert-warning recommended-books-error d-none mt-3 mb-0" role="alert">
+                        We couldn't load book recommendations right now. Please try again later.
                     </div>
                 </div>
             </div>
@@ -370,6 +391,7 @@
 <script src="../js/time.js"></script>
 <script src="../js/background.js"></script>
 <script src="../js/course-detail.js"></script>
+<script src="../js/recommended-books.js"></script>
 <script src="../js/project-modal.js"></script>
 <script src="../js/scroll-progress.js"></script>
 <script src="../js/search-highlight.js"></script>
