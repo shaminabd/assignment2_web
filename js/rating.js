@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => { star.style.transform = 'scale(1)'; }, 160);
         } catch (_) {}
 
-        // Save rating to local storage
         saveRating(currentRating);
 
         if (typeof showToast === 'function') {
@@ -67,6 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem('ratings', JSON.stringify(ratings));
     }
 
+    function loadSavedRating() {
+        const ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+        if (ratings.length > 0) {
+            const lastRating = ratings[ratings.length - 1];
+            currentRating = lastRating.rating;
+        }
+    }
+
+    loadSavedRating();
+
     stars.forEach((starEl, index) => {
         starEl.addEventListener("mouseenter", () => handleHover(index));
         starEl.addEventListener("mouseleave", handleLeave);
@@ -80,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         starEl.setAttribute("tabindex", "0");
     });
 
-    render(0);
+    render(currentRating);
 });
 
 

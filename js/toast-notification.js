@@ -3,7 +3,7 @@ $(document).ready(function() {
         const toastHTML = `
             <div id="toastContainer" style="
                 position: fixed;
-                top: 20px;
+                bottom: 20px;
                 right: 20px;
                 z-index: 10000;
                 max-width: 350px;
