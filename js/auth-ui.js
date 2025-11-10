@@ -39,7 +39,7 @@ function updateAuthUI() {
 
     const authDiv = document.createElement('div');
     authDiv.id = 'authButtons';
-    authDiv.className = 'd-flex gap-2 align-items-center ms-3 auth-buttons-container';
+    authDiv.className = 'd-flex flex-column flex-md-row gap-2 align-items-center mt-3 mt-md-0 ms-md-3 auth-buttons-container';
 
     const authPath = getAuthPath();
     const profilePath = getProfilePath();
@@ -47,13 +47,13 @@ function updateAuthUI() {
     if (auth.isLoggedIn()) {
         const user = auth.getCurrentUser();
         authDiv.innerHTML = `
-            <small class="text-white d-none d-md-inline">Welcome, ${user.name}!</small>
-            <a href="${profilePath}" class="btn btn-sm btn-light auth-profile-btn" title="View your profile">👤 Profile</a>
-            <button onclick="handleLogout()" class="btn btn-sm btn-warning auth-logout-btn" title="Log out">🚪 Logout</button>
+            <small class="text-white d-block d-md-inline mb-2 mb-md-0">Welcome, ${user.name}!</small>
+            <a href="${profilePath}" class="btn btn-sm btn-light auth-profile-btn w-100 w-md-auto" title="View your profile">👤 Profile</a>
+            <button onclick="handleLogout()" class="btn btn-sm btn-warning auth-logout-btn w-100 w-md-auto" title="Log out">🚪 Logout</button>
         `;
     } else {
         authDiv.innerHTML = `
-            <a href="${authPath}" class="btn btn-sm btn-light auth-btn" title="Sign up or log in">🔐 Auth</a>
+            <a href="${authPath}" class="btn btn-sm btn-light auth-btn w-100 w-md-auto" title="Sign up or log in">🔐 Auth</a>
         `;
     }
 
