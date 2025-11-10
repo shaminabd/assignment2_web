@@ -80,7 +80,7 @@ body {
 }
 
 .dark-mode .price { color: #e5e7eb; }
-.dark-mode .features li { background: #0b1220; color: #e5e7eb; border-left-color: #1f2937; }
+.dark-mode .features li { background: #0b1220; color: #e5e7eb; border-left-color: #4373b1; }
 .dark-mode .comparison th { background: #111827; }
 .dark-mode footer { background: linear-gradient(135deg, #0b1220, #111827); }
 .dark-mode details { background: #0f172a; color: #e5e7eb; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); }
@@ -116,11 +116,27 @@ body.dark-mode .faq-answer {
 }
 
 body.dark-mode .plan {
-    background: #0f172a !important;
+    background: linear-gradient(160deg, rgba(59, 130, 246, 0.18), rgba(96, 165, 250, 0.12)) !important;
+    border: 1px solid rgba(148, 163, 184, 0.35) !important;
 }
 
 body.dark-mode .plan-head h3 {
     color: #60a5fa !important;
+}
+
+.dark-mode .plan .price {
+    color: #e0f2fe !important;
+}
+
+.dark-mode .plan .price small {
+    color: #bfdbfe !important;
+}
+
+.dark-mode .features li {
+    background: rgba(30, 64, 175, 0.35);
+    color: #f1f5f9;
+    border-left-color: rgba(191, 219, 254, 0.8);
+    box-shadow: inset 0 0 0 1px rgba(99, 102, 241, 0.25);
 }
 
 body.dark-mode .form-select {
@@ -391,11 +407,46 @@ header nav {
     margin: 1rem auto;
     padding: 0.8rem 1.2rem;
     border-radius: 8px;
-    background: #fbbf24;
+    background: #f8fafc;
     color: #0f172a;
     font-weight: 800;
     max-width: 500px;
-    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+    display: inline-flex;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-banner .promo-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #6d28d9, #7c3aed);
+    color: #f8fafc;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+}
+
+.promo-banner strong {
+    color: #111827;
+}
+
+.dark-mode .promo-banner {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.95), rgba(37, 99, 235, 0.92));
+    color: #e2e8f0;
+    box-shadow: 0 4px 16px rgba(30, 64, 175, 0.45);
+}
+
+.dark-mode .promo-banner .promo-label {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: #fdf4ff;
+    box-shadow: 0 0 0 1px rgba(250, 232, 255, 0.25);
+}
+
+.dark-mode .promo-banner strong {
+    color: #fbbf24;
 }
 
 
