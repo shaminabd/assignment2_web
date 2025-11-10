@@ -929,6 +929,28 @@ p {
     font-size: 0.95rem;
 }
 
+@media (min-width: 577px) and (max-width: 767px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    h3 {
+        font-size: 1.3rem !important;
+    }
+
+    p, body {
+        font-size: 1.1rem !important;
+    }
+
+    .nav-link, a {
+        font-size: 1.05rem !important;
+    }
+}
+
 @media (min-width: 768px) {
     h1 {
         font-size: 2.5rem;
@@ -1025,6 +1047,29 @@ p {
         font-size: 0.95rem !important;
         width: auto !important;
         max-width: 150px !important;
+        margin-bottom: 0.5rem !important;
+        margin-right: 0.5rem !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+    #authButtons {
+        display: block !important;
+        margin: 0.75rem 0 0 0 !important;
+        padding: 0 1rem !important;
+    }
+
+    #authButtons .auth-btn,
+    #authButtons .auth-profile-btn,
+    #authButtons .auth-logout-btn {
+        display: inline-block !important;
+        padding: 0.6rem 1.2rem !important;
+        font-size: 1.05rem !important;
+        width: auto !important;
+        max-width: 180px !important;
         margin-bottom: 0.5rem !important;
         margin-right: 0.5rem !important;
         white-space: nowrap !important;
