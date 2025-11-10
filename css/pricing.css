@@ -853,7 +853,7 @@ p {
 #authButtons {
     display: block !important;
     margin: 1rem 0 0 0 !important;
-    padding: 0 1rem !important;
+    padding: 0 0.3rem !important;
     width: 100% !important;
 }
 
@@ -907,7 +907,7 @@ p {
     #authButtons {
         display: block !important;
         margin: 0.75rem 0 0 0 !important;
-        padding: 0 1rem !important;
+        padding: 0 0.3rem !important;
     }
 
     #authButtons .auth-btn,
@@ -930,7 +930,7 @@ p {
     #authButtons {
         display: block !important;
         margin: 0.75rem 0 0 0 !important;
-        padding: 0 1rem !important;
+        padding: 0 0.3rem !important;
     }
 
     #authButtons .auth-btn,
