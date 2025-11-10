@@ -18,6 +18,29 @@ body {
     min-height: 100vh;
 }
 
+.form-floating > .form-control::placeholder,
+.form-floating > textarea.form-control::placeholder {
+    color: transparent;
+    opacity: 0;
+}
+
+.form-floating > .form-control:focus::placeholder,
+.form-floating > textarea.form-control:focus::placeholder {
+    color: transparent;
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    body {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 1.08rem;
+    }
+}
+
 .dark-mode {
     background: #0f172a;
     color: #f1f5f9;
@@ -53,12 +76,12 @@ body {
 }
 
 .dark-mode .breadcrumb a {
-    color: #cbd5e1;
+    color: #60a5fa !important;
 }
 
 .dark-mode .breadcrumb a:hover,
 .dark-mode .breadcrumb a:focus {
-    color: #fbbf24;
+    color: #93c5fd !important;
 }
 
 .dark-mode .course-card h3,
@@ -100,8 +123,24 @@ body {
 }
 
 .dark-mode .breadcrumb {
-    background: #0f172a;
-    color: #9ca3af;
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #cbd5f5;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.dark-mode .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(249, 249, 249, 0.933);
+}
+
+.dark-mode .breadcrumb .breadcrumb-item {
+    color: #e2e8f0;
+}
+
+.dark-mode .breadcrumb .breadcrumb-item.active {
+    color: #f8fafc !important;
+    font-weight: 600;
 }
 
 .dark-mode .course-topics li {
@@ -1107,7 +1146,8 @@ p, .lead {
 }
 
 .dark-mode .form-control::placeholder {
-    color: #cbd5e1 !important;
+    color: transparent !important;
+    opacity: 0 !important;
 }
 
 .dark-mode .form-floating label {

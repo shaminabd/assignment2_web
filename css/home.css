@@ -14,6 +14,18 @@ body {
     min-height: 100vh;
 }
 
+@media (min-width: 577px) and (max-width: 991px) {
+    body {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 1.07rem;
+    }
+}
+
 .dark-mode {
     background: #0f172a;
     color: #f1f5f9;
@@ -143,6 +155,8 @@ body {
     background: #0f172a !important;
     color: #f8fafc !important;
     border-color: #475569 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .dark-mode .contact-form input:focus,
@@ -159,7 +173,8 @@ body {
 
 .dark-mode .contact-form input::placeholder,
 .dark-mode .contact-form textarea::placeholder {
-    color: #cbd5e1 !important;
+    color: transparent !important;
+    opacity: 0 !important;
 }
 
 .dark-mode .form-floating label {
@@ -569,6 +584,12 @@ header nav {
     margin-bottom: 2rem;
 }
 
+@media (max-width: 576px) {
+    .about .btn {
+        margin-bottom: 1.25rem;
+    }
+}
+
 .team {
     display: flex;
     justify-content: center;
@@ -794,6 +815,15 @@ header nav {
 .contact-form textarea:focus {
     outline: none;
     border-color: #3b82f6;
+}
+
+.contact-form .form-floating .form-control::placeholder {
+    color: transparent;
+    opacity: 0;
+}
+
+.contact-form .form-floating .form-control:focus::placeholder {
+    color: transparent;
 }
 
 .contact-form button {
