@@ -44,7 +44,6 @@ $(document).ready(function() {
             }
         });
 
-        // Save search to local storage
         if (searchTerm.length > 0) {
             saveSearchHistory(searchTerm, resultCount);
 
@@ -71,11 +70,9 @@ $(document).ready(function() {
         }
     });
 
-    // Save search history to local storage
     function saveSearchHistory(query, results) {
         const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
         
-        // Only save if it's a new search or different from the last one
         const lastSearch = searchHistory[searchHistory.length - 1];
         if (!lastSearch || lastSearch.query !== query) {
             searchHistory.push({
@@ -84,7 +81,6 @@ $(document).ready(function() {
                 timestamp: new Date().toISOString()
             });
             
-            // Keep only last 50 searches
             if (searchHistory.length > 50) {
                 searchHistory.shift();
             }

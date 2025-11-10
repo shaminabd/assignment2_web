@@ -1,24 +1,16 @@
-// ============================================
-// Authentication UI Handler
-// ============================================
-
 document.addEventListener('DOMContentLoaded', function() {
     updateAuthUI();
 });
 
-// Get correct relative path based on current page location
 function getAuthPath() {
     const currentPath = window.location.pathname;
     
-    // If in header_pages folder
     if (currentPath.includes('/header_pages/')) {
         return 'auth.html';
     }
-    // If in course-details folder
     else if (currentPath.includes('/course-details/')) {
         return '../header_pages/auth.html';
     }
-    // If in root (index.html)
     else {
         return 'header_pages/auth.html';
     }
@@ -27,21 +19,17 @@ function getAuthPath() {
 function getProfilePath() {
     const currentPath = window.location.pathname;
     
-    // If in header_pages folder
     if (currentPath.includes('/header_pages/')) {
         return 'profile.html';
     }
-    // If in course-details folder
     else if (currentPath.includes('/course-details/')) {
         return '../header_pages/profile.html';
     }
-    // If in root (index.html)
     else {
         return 'header_pages/profile.html';
     }
 }
 
-// Update navbar with login/logout buttons
 function updateAuthUI() {
     const navbarNav = document.querySelector('.collapse.navbar-collapse');
     if (!navbarNav) return;
@@ -72,7 +60,6 @@ function updateAuthUI() {
     navbarNav.appendChild(authDiv);
 }
 
-// Handle logout
 function handleLogout() {
     if (confirm('Are you sure you want to log out?')) {
         auth.logout();
@@ -80,7 +67,6 @@ function handleLogout() {
             showToast('Logged out successfully!', 'success');
         }
         updateAuthUI();
-        // Redirect to home if on profile page
         if (window.location.pathname.includes('profile.html')) {
             window.location.href = 'index.html';
         }
